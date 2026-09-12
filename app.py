@@ -107,19 +107,58 @@ html, body, [class*="css"] {
     line-height: 1.65;
 }
 
+/* Markdown Table Styling for Contracts */
+table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1.25rem 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+th {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 2px solid #cbd5e1 !important;
+    font-size: 0.88rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+}
+
+td {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    color: #334155 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc !important;
+}
+
+tr:hover {
+    background-color: #f1f5f9 !important;
+}
+
 .dossier-content h3 {
     color: #0f172a;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin-top: 1.4rem;
-    margin-bottom: 0.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
     border-bottom: 1px solid #f1f5f9;
     padding-bottom: 0.35rem;
 }
 
 .dossier-content p, .dossier-content li {
     color: #334155;
-    font-size: 0.96rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Active Document Topbar */
@@ -227,11 +266,6 @@ from modules.document_processor import (
     detect_key_clauses_summary,
 )
 from modules.embeddings import create_faiss_index
-from modules.knowledge_base import (
-    load_legal_terms,
-    load_common_clauses,
-    load_government_forms,
-)
 
 # Root directory paths for sample documents
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -563,18 +597,19 @@ def render_active_document_workspace():
     dossier_text = dossier.get("text", "")
 
     # -------------------------------------------------------------
-    # SECTION 1: EXECUTIVE AI LEGAL DOSSIER
+    # SECTION 1: PLAIN-ENGLISH CONTRACT BREAKDOWN
     # -------------------------------------------------------------
+    card_title = "📋 Plain-English Contract Breakdown" if not is_urdu else "📋 معاہدے کا آسان اردو جائزہ و رہنمائی"
+    card_subtitle = "Key terms, tricky clauses & what you must know before signing" if not is_urdu else "بنیادی شرائط، پوشیدہ خطرات اور دستخط سے قبل اہم احتیاطی تدابیر"
+    badge_label = "⚡ AI Contract Intelligence" if not is_urdu else "⚡ خودکار قانونی تجزیہ"
+
     st.markdown(
         f"""
         <div class="executive-card {rtl_class}">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.85rem; margin-bottom: 1.25rem;">
-                <div>
-                    <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #2563eb; letter-spacing: 0.05em;">AI Intelligence Dossier</span>
-                    <h2 style="color: #0f172a; font-size: 1.55rem; font-weight: 800; margin: 0.2rem 0 0 0;">Executive Legal Briefing</h2>
-                </div>
-            </div>
-            <div class="dossier-content">
+            <div style="border-bottom: 2px solid #e2e8f0; padding-bottom: 0.85rem; margin-bottom: 1rem;">
+                <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: #2563eb; letter-spacing: 0.05em; background: #eff6ff; padding: 0.2rem 0.6rem; border-radius: 9999px;">{badge_label}</span>
+                <h2 style="color: #0f172a; font-size: 1.5rem; font-weight: 800; margin: 0.35rem 0 0.2rem 0;">{card_title}</h2>
+                <p style="color: #64748b; font-size: 0.9rem; margin: 0;">{card_subtitle}</p>
             </div>
         </div>
         """,
@@ -583,15 +618,15 @@ def render_active_document_workspace():
 
     # Render dossier markdown cleanly inside container
     with st.container():
-        st.markdown(f"<div class='{rtl_class}'>", unsafe_allow_html=True)
+        st.markdown(f"<div class='dossier-content {rtl_class}'>", unsafe_allow_html=True)
         st.markdown(dossier_text)
         st.markdown("</div>", unsafe_allow_html=True)
 
     # Download Dossier Button
     st.download_button(
-        label="📥 Download Executive Briefing (.md)",
-        data=f"# LegalDocAiAssist Briefing: {doc_name}\n\n{dossier_text}\n\n---\n*Educational legal AI intelligence report.*",
-        file_name=f"{doc_name}_Executive_Briefing.md",
+        label="📥 Download Contract Breakdown (.md)",
+        data=f"# LegalDocAiAssist Breakdown: {doc_name}\n\n{dossier_text}\n\n---\n*Educational legal AI intelligence report.*",
+        file_name=f"{doc_name}_Plain_English_Breakdown.md",
         mime="text/markdown",
         use_container_width=False
     )
@@ -608,10 +643,10 @@ def render_active_document_workspace():
     st.caption("💡 **Quick Suggested Inquiries:**")
     prompt_col1, prompt_col2, prompt_col3, prompt_col4 = st.columns(4)
     sample_questions = [
-        "Can I terminate early and what notice is required?",
+        "Can I cancel early and what notice is required?",
         "What are the payment terms and late penalties?",
-        "Is there an indemnity clause and who is protected?",
-        "What law governs this contract and how are disputes resolved?"
+        "Is there an indemnity trap and who is protected?",
+        "What is the biggest hidden risk for me in this contract?"
     ]
     chosen_prompt = None
     with prompt_col1:
@@ -699,43 +734,6 @@ def render_active_document_workspace():
                 else:
                     st.caption("No direct clause matches.")
 
-    st.markdown("---")
-
-    # -------------------------------------------------------------
-    # SECTION 3: DEEPER CONTRACT EXPLORATION (CLEAN ACCORDIONS)
-    # -------------------------------------------------------------
-    st.markdown("### 📂 Document Explorer & Reference")
-    
-    with st.expander(f"🔍 Search & Browse All Indexed Clauses ({total_chunks})", expanded=False):
-        filter_kw = st.text_input("Filter clauses by keyword (e.g. 'Termination', 'Payment', 'Liability')", "").strip().lower()
-        chunks_to_show = [
-            c for c in st.session_state.document_chunks
-            if not filter_kw or filter_kw in c["text"].lower() or filter_kw in c["section"].lower() or filter_kw in c["clause"].lower()
-        ]
-
-        st.caption(f"Showing **{len(chunks_to_show)}** matching clauses:")
-        for c_idx, chk in enumerate(chunks_to_show[:25]):
-            st.markdown(f"**Page {chk.get('page', 1)} • {chk.get('section', 'General')} — {chk.get('clause', 'Clause')}**")
-            st.markdown(
-                f"""
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.85rem; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                    {chk.get('text', '')}
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-
-    with st.expander("📚 Legal Glossary & Plain-Language Definitions", expanded=False):
-        terms = load_legal_terms()
-        t_search = st.text_input("Search legal terms...", placeholder="e.g. Indemnity, Force Majeure, Liquidated Damages").strip().lower()
-        filtered = [t for t in terms if not t_search or t_search in t["term"].lower() or t_search in t.get("simple_english", "").lower()]
-        
-        st.caption(f"Displaying **{len(filtered)}** authentic legal terms:")
-        for t in filtered[:15]:
-            st.markdown(f"**{t['term']}** *({t.get('category', 'Legal Concept')})*")
-            st.markdown(f"• **Plain English:** {t.get('simple_english', '')}")
-            if t.get("simple_urdu"):
-                st.markdown(f"<div class='rtl-content'>• <strong>اردو میں:</strong> {t.get('simple_urdu')}</div>", unsafe_allow_html=True)
 
 
 def main():

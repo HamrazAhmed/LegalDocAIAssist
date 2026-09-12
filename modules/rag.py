@@ -546,43 +546,57 @@ def generate_document_dossier(
 
     if HAS_GENAI_SDK and resolved_key:
         lang_note = (
-            "LANGUAGE: Respond in authentic, professional Urdu (اردو) script. Include English legal terms in parentheses where appropriate."
+            "LANGUAGE: Respond in authentic, professional Urdu (اردو) script. Use clean markdown tables and bullets."
             if is_urdu
-            else "LANGUAGE: Respond in clear, executive-level, professional English."
+            else "LANGUAGE: Respond in simple, punchy, conversational plain English. Avoid legalese."
         )
 
-        prompt = f"""You are LegalDocAiAssist, an executive AI legal advisor and contract intelligence platform.
-A client has just uploaded a legal document. Analyze the extracted excerpts and provisions below and generate an executive-level AI Legal Dossier.
+        prompt = f"""You are LegalDocAiAssist. Explain this legal contract to an everyday non-lawyer (freelancer, consumer, small business owner).
+DO NOT write long walls of text. Be concise, punchy, and highlight hidden traps they wouldn't understand.
 
-=== EXTRACTED DOCUMENT EXCERPTS ===
+=== EXTRACTED CONTRACT EXCERPTS ===
 {doc_context}
 
 === DETECTED PROVISIONS STATUS ===
 {json.dumps(ind_flags, indent=2)}
-Citations: {json.dumps(ind_citations, indent=2)}
 
 {lang_note}
 
-Structure your response cleanly using these exact Markdown headings:
+Format your response STRICTLY with these clean markdown sections, tables, and bullets:
 
-### 📋 Executive Summary
-[A concise 2-3 paragraph plain-language overview of the agreement, its primary commercial purpose, and what obligations it imposes on the parties.]
+### 📌 30-Second Snapshot
+[1 to 2 simple sentences explaining exactly what this contract is and what the user is committing to in plain, everyday words.]
 
-### ⚖️ Key Commercial Terms & Parameters
-- **Document Nature:** [e.g., Bilateral Commercial Contract / Lease Agreement / Confidentiality Agreement]
-- **Core Obligations:** [Summary of what party A and party B must deliver]
-- **Financial & Payment Terms:** [Invoicing, billing timeline (e.g. Net 30), penalties or rent]
-- **Term & Duration:** [Contract term, renewal rules, effective date]
-- **Governing Law & Jurisdiction:** [Applicable law and dispute mechanism]
+### 📊 Core Deal Terms at a Glance
+| Term | What The Contract Says | Plain Meaning For You |
+| :--- | :--- | :--- |
+| **Parties & Role** | [Contracting parties] | [Who is paying vs who is doing the work] |
+| **Money / Pay** | [Fee, billing, or rent] | [Exact payment terms & due dates] |
+| **Duration** | [Term / Effective date] | [How long you are bound to this deal] |
+| **Cancellation** | [Notice period e.g. 30 days] | [How easily either party can walk away] |
+| **Governing Law** | [City / State / Venue] | [Where you have to travel if there's a court dispute] |
 
-### 🛡️ Core Protections & Risk Radar
-[A bulleted breakdown evaluating key protections: Termination Rights, Indemnity Scope, Liability Cap, and Confidentiality. Highlight whether each clause is balanced or favors one party.]
+### 🚦 Risk Traffic Light
+- 🟢 **Standard & Balanced:** [1-2 fair clauses]
+- 🟡 **Caution / Needs Attention:** [1-2 strict timelines or payment terms]
+- 🔴 **Watch Out (Traps & Gotchas):** [1-2 dangerous or one-sided obligations normal people miss]
 
-### 🚩 Critical Red Flags & Client Precautions
-- [3-4 specific watchouts, potential traps, or one-sided obligations in this agreement.]
+### 🕵️ 3 Tricky Clauses Normal People Miss
+- ⚠️ **Termination Trap:** [Can they cancel on you without cause while you cannot? What is the notice period?]
+- ⚠️ **Liability Trap:** [If you make a mistake, is your financial liability capped at total fees, or could they sue you for unlimited damages?]
+- ⚠️ **Intellectual Property / Rights Trap:** [Who owns the work created? Do you lose your rights upon delivery or upon payment?]
 
-### 💡 Suggested Action Items Before Signing
-- [2-3 concrete negotiation or review recommendations.]
+### 📖 Legal Jargon Buster (Confusing Words Translated)
+| Confusing Legal Term | What Normal People Think | What It Actually Means For You |
+| :--- | :--- | :--- |
+| **Indemnify & Hold Harmless** | "Sounds harmless" | ⚠️ You agree to pay the other party's legal bills and damages if someone sues them! |
+| **Limitation of Liability** | "They have limits" | 🛡️ The maximum dollar ceiling anyone can recover from you if something goes wrong. |
+| **Liquidated Damages** | "Liquid assets" | ⚠️ Pre-agreed cash penalty you must pay immediately if there is any delay or breach. |
+
+### ✅ Checklist Before You Sign
+- [ ] [Key negotiation tip 1 - e.g. verify mutual cancellation notice]
+- [ ] [Key negotiation tip 2 - e.g. confirm financial cap on liability]
+- [ ] [Key negotiation tip 3 - e.g. ensure payment due date is in writing]
 """
         models_to_try = [active_model]
         for candidate in ["gemini-3.6-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.5-flash"]:
@@ -604,60 +618,84 @@ Structure your response cleanly using these exact Markdown headings:
             except Exception:
                 continue
 
-    # Fallback Dossier Generation
-    detected_count = indicators.get("detected_count", 0)
-    total_checks = indicators.get("total_checks", 7)
-    first_clause = chunks[0].get("text", "")[:200] if chunks else "Legal Agreement"
+    # Fallback Dossier Generation (Concise, punchy, tabular)
+    first_clause = chunks[0].get("text", "")[:180] if chunks else "Commercial Agreement"
+    term_ref = ind_citations.get("Termination Clause", "30 Days written notice")
+    liab_ref = ind_citations.get("Limitation of Liability", "Refer to liability clause")
+    indem_ref = ind_citations.get("Indemnity / Hold Harmless", "Indemnity obligation present")
+    gov_ref = ind_citations.get("Governing Law & Jurisdiction", "Governing jurisdiction specified")
+    pay_ref = ind_citations.get("Payment & Invoicing Terms", "Net 30 Invoicing / Agreed Fee")
 
     if is_urdu:
-        fallback_md = f"""### 📋 دستاویز کا ایگزیکٹو خلاصہ (Executive Summary)
-یہ قانونی دستاویز فریقین کے مابین باہمی ذمہ داریوں اور حقوق کے تعین کے لیے تیار کی گئی ہے۔ معاہدے کے ابتدائی متن کے مطابق: *"{first_clause}..."*۔ یہ معاہدہ تجارتی تعلقات، کام کی نوعیت اور مالی و قانونی ذمہ داریوں کو واضح ضوابط کے تحت پابند کرتا ہے۔
+        fallback_md = f"""### 📌 ۳۰ سیکنڈ کا خلاصہ (30-Second Snapshot)
+یہ ایک باضابطہ قانونی معاہدہ ہے جو فریقین کے مابین باہمی ذمہ داریوں، کام کی تفصیل اور ادائیگی کے اصول طے کرتا ہے۔ آسان الفاظ میں: یہ دستاویز طے کرتی ہے کہ کون کیا کام کرے گا، کب رقم ملے گی اور اگر کوئی مسئلہ ہوا تو کیا ہوگا۔
 
-### ⚖️ اہم تجارتی شرائط و احکام (Key Commercial Terms)
-- **دستاویز کی نوعیت:** باضابطہ قانونی و تجارتی معاہدہ
-- **کل الفاظ و حجم:** تقریباً {total_words:,} الفاظ ({len(chunks)} کلیدی شقیں)
-- **اہم دفعات کی موجودگی:** {total_checks} میں سے {detected_count} بنیادی حفاظتی شقیں دستاویز میں موجود ہیں
-- **حکمران قانون و دائرہ اختیار:** {ind_citations.get('Governing Law & Jurisdiction', 'دستاویز میں متعلقہ شق درج ہے')}
+### 📊 بنیادی شرائط ایک نظر میں (Core Deal Terms)
+| اہم نکتہ | معاہدے کی شرط | آپ کے لیے آسان مطلب |
+| :--- | :--- | :--- |
+| **معاہدے کی نوعیت** | تجارتی معاہدہ ({total_words:,} الفاظ) | فریقین کے مابین باضابطہ قانونی سمجھوتہ |
+| **ادائیگی و معاوضہ** | {pay_ref} | رقم کی ادائیگی کا وقت اور طریقہ کار |
+| **معاہدے کی منسوخی** | {term_ref} | معاہدہ ختم کرنے کے لیے درکار تحریری نوٹس |
+| **ذمہ داری کی حد** | {liab_ref} | نقصان کی صورت میں مالی معاوضے کی حد |
+| **عدالتی دائرہ اختیار** | {gov_ref} | تنازع کی صورت میں کس عدالت سے رجوع ہوگا |
 
-### 🛡️ بنیادی قانونی تحفظات کا تجزیہ (Risk & Protections Radar)
-- **منسوخی کا طریقہ کار (Termination):** {ind_citations.get('Termination Clause', 'نوٹس اور طریقہ کار کا جائزہ لیں')}
-- **ضمانتِ تلافی (Indemnity):** {ind_citations.get('Indemnity / Hold Harmless', 'فریقین کی باہمی تلافی کی شرائط درج ہیں')}
-- **ذمہ داری کی حد (Liability Cap):** {ind_citations.get('Limitation of Liability', 'مالیاتی حد بندی موجود ہے')}
-- **رازداری (Confidentiality):** {ind_citations.get('Confidentiality / NDA', 'تجارتی رازوں کے تحفظ کی شق شامل ہے')}
+### 🚦 رسک ٹریفک لائٹ (Risk Traffic Light)
+- 🟢 **محفوظ اور معمول کی شرائط:** رازداری (Confidentiality) اور کام کی فراہمی کی شرائط عام اصولوں کے مطابق ہیں۔
+- 🟡 **توجہ طلب پہلو:** ادائیگی کی تاریخ اور کام کی منظوری (Acceptance) کا وقت واضح ہونا چاہیے۔
+- 🔴 **خبردار (اہم ترین خطرات):** یکطرفہ منسوخی یا لامحدود مالی نقصان (Uncapped Liability) سے بچنا ضروری ہے۔
 
-### 🚩 کلیدی خطرات اور انتباہات (Red Flags & Precautions)
-- معاہدے کی شرائط کا بغور جائزہ لیں تاکہ کوئی یکطرفہ یا غیر متوازن شق موجود نہ ہو۔
-- منسوخی کی صورت میں درکار تحریری نوٹس کے دورانیے (مثلاً 30 یوم) کو ملحوظ رکھیں۔
-- مالی نقصانات اور جرمانے کی صورت میں اپنی زیادہ سے زیادہ مالی ذمہ داری (Liability Cap) کا تعین یقینی بنائیں۔
+### 🕵️ ۳ باتیں جو عام لوگ نظر انداز کر دیتے ہیں (Hidden Gotchas)
+- ⚠️ **منسوخی کا اصول (Termination):** کیا دوسرا فریق بغیر کسی وجہ کے فوری معاہدہ ختم کر سکتا ہے؟ نوٹس کا وقت دونوں فریقوں کے لیے برابر ہونا چاہیے۔
+- ⚠️ **مالی نقصان کی حد (Liability Cap):** اگر کوئی غلطی ہو جائے تو کیا آپ کو فیس سے زیادہ کروڑوں کا ہرجانہ بھرنا پڑے گا؟ ذمہ داری کی حد فیس کے برابر ہونی چاہیے۔
+- ⚠️ **حقوقِ ملکیت (Intellectual Property):** کیا مکمل ادائیگی سے پہلے ہی تمام مالکانہ حقوق دوسرے فریق کو منتقل تو نہیں ہو رہے؟
 
-### 💡 دستخط کرنے سے قبل تجویز کردہ اقدامات
-- ادائیگی کے شیڈول اور کام کی فراہمی کے مراحل کو تحریری طور پر واضح کریں۔
-- کسی بھی ابہام کی صورت میں باضابطہ دستخط سے قبل مستند وکیل سے مشاورت کریں۔
+### 📖 الجھن پیدا کرنے والے قانونی الفاظ کے آسان معنی
+| قانونی اصطلاح | عام لوگ کیا سمجھتے ہیں | اصل میں آپ کے لیے اس کا کیا مطلب ہے |
+| :--- | :--- | :--- |
+| **ضمانتِ تلافی (Indemnity)** | "کوئی عام بات ہے" | ⚠️ اگر کسی نے مقدمہ کیا تو سارا خرچہ اور وکیل کی فیس آپ کی جیب سے جائے گی! |
+| **ذمہ داری کی حد (Limitation of Liability)** | "پابندیاں لگ رہی ہیں" | 🛡️ آپ کے لیے حفاظتی ڈھال، تاکہ آپ پر لامحدود ہرجانہ نہ ڈالا جا سکے۔ |
+| **طے شدہ جرمانہ (Liquidated Damages)** | "سیال رقم" | ⚠️ تاخیر یا خلاف ورزی کی صورت میں پہلے سے طے شدہ نقد جرمانہ۔ |
+
+### ✅ دستخط کرنے سے پہلے ۳ ضروری کام
+- [ ] چیک کریں کہ معاہدہ ختم کرنے کا نوٹس دونوں فریقوں کے لیے ایک جیسا ہو۔
+- [ ] مالی نقصان کی زیادہ سے زیادہ حد (Liability Cap) واضح کروائیں۔
+- [ ] تمام زبانی وعدے معاہدے میں تحریری طور پر درج کروائیں۔
 """
     else:
-        fallback_md = f"""### 📋 Executive Summary
-This legal agreement establishes binding terms, mutual covenants, and defined obligations between the executing parties. Based on the preliminary clauses: *"{first_clause}..."*, this agreement sets the commercial governance framework, project delivery terms, and legal risk allocation.
+        fallback_md = f"""### 📌 30-Second Snapshot
+This contract legally binds the parties to deliver services, make payments, and handle disputes under defined terms. In plain words: **it dictates what work you must do, when and how you get paid, and who pays if things go wrong.**
 
-### ⚖️ Key Commercial Terms & Parameters
-- **Document Classification:** Formal Commercial Agreement / Binding Covenant
-- **Scope & Ingested Size:** {total_words:,} words across {len(chunks)} structured clause units
-- **Core Protection Index:** {detected_count} of {total_checks} indispensable contract provisions detected
-- **Governing Law & Forum:** {ind_citations.get('Governing Law & Jurisdiction', 'Refer to jurisdiction & venue provisions')}
+### 📊 Core Deal Terms at a Glance
+| Term | What The Contract Says | Plain Meaning For You |
+| :--- | :--- | :--- |
+| **Agreement Type** | Commercial Binding Agreement ({total_words:,} words) | A legally enforceable business contract |
+| **Payment & Billing** | {pay_ref} | Strict invoicing schedules, milestones, or rent |
+| **Cancellation** | {term_ref} | How many days of written notice are required to exit |
+| **Liability Ceiling** | {liab_ref} | Maximum monetary damages you could ever owe |
+| **Legal Venue** | {gov_ref} | Where disputes are arbitrated or litigated |
 
-### 🛡️ Core Protections & Risk Radar
-- **Termination & Notice:** {ind_citations.get('Termination Clause', 'Explicit termination and cure periods outlined')}
-- **Indemnification Scope:** {ind_citations.get('Indemnity / Hold Harmless', 'Standard indemnity defense and hold harmless covenant')}
-- **Limitation of Liability:** {ind_citations.get('Limitation of Liability', 'Aggregate monetary liability caps specified')}
-- **Confidentiality & Non-Disclosure:** {ind_citations.get('Confidentiality / NDA', 'Proprietary information and trade secret safeguards')}
+### 🚦 Risk Traffic Light
+- 🟢 **Standard & Balanced:** Confidentiality safeguards and standard business covenants are in place.
+- 🟡 **Caution / Needs Attention:** Payment milestones and breach cure periods require strict calendar tracking.
+- 🔴 **Watch Out (Traps & Gotchas):** Check for one-sided termination rights or open-ended financial indemnities!
 
-### 🚩 Critical Red Flags & Client Precautions
-- **Verify Mutual vs Unilateral Rights:** Ensure termination for convenience or default is mutually reciprocal rather than one-sided.
-- **Review Liability Ceilings:** Confirm that direct and consequential damages are subject to a defined aggregate financial cap.
-- **Inspect Payment & Cure Windows:** Note exact notification timeframes (e.g. 15–30 days) required to remedy any alleged breach before penalties trigger.
+### 🕵️ 3 Tricky Clauses Normal People Miss
+- ⚠️ **The Cancellation Trap (Termination):** Can the other side cancel anytime for convenience while locking you in? Always demand equal termination notice (e.g. 30 days mutual).
+- ⚠️ **The Liability Trap (Limitation of Liability):** If something goes wrong, are you on the hook for millions or just the fees paid? Ensure liability is strictly capped at total project fees.
+- ⚠️ **The IP Trap (Ownership of Work):** Does the client own your work product immediately, or only **after** they have paid you in full? Never transfer ownership prior to payment.
 
-### 💡 Suggested Action Items Before Signing
-- Cross-examine exhibit schedules, payment milestones, and defined deliverables against operational expectations.
-- Validate that dispute resolution mechanisms (arbitration vs court litigation) align with your corporate risk tolerance.
+### 📖 Legal Jargon Buster (Confusing Words Translated)
+| Confusing Legal Term | What Normal People Think | What It Actually Means For You |
+| :--- | :--- | :--- |
+| **Indemnify & Hold Harmless** | "Sounds harmless" | ⚠️ You agree to pay the other party's legal bills and court damages if someone sues them! |
+| **Limitation of Liability** | "They have limits" | 🛡️ Your financial shield: caps the maximum cash anyone can sue you for. |
+| **Liquidated Damages** | "Liquid cash" | ⚠️ A pre-agreed cash penalty you must pay immediately if there is any delay or breach. |
+| **Severability** | "Severing ties" | If a judge finds one line illegal, the rest of the contract still stays alive. |
+
+### ✅ Checklist Before You Sign
+- [ ] **Confirm Mutual Notice:** Make sure both parties have the same right to terminate with written notice.
+- [ ] **Verify Payment Timing:** Ensure clear deadlines (e.g. Net 30) and interest caps on late invoices.
+- [ ] **Check Liability Cap:** Verify that your total liability is capped at the fees actually received under the contract.
 """
 
     return {
