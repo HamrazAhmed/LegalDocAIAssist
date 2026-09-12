@@ -1,0 +1,426 @@
+[
+  {
+    "clause": "Parties",
+    "category": "Foundations",
+    "meaning": "Identifies the exact legal entities or persons entering into the agreement, including their registration numbers and principal addresses.",
+    "simple_english": "Explains who is making the deal and signing the contract.",
+    "simple_urdu": "معاہدہ کرنے والے فریقین کے نام، پتے اور رجسٹریشن کی باضابطہ شناخت۔",
+    "what_to_look_for": "Verify that exact legal corporate names and entity types (e.g. LLC, Pvt Ltd) are used rather than informal trade names."
+  },
+  {
+    "clause": "Definitions",
+    "category": "Foundations",
+    "meaning": "Assigns specific, tailored meanings to capitalized terms used throughout the agreement to avoid ambiguity.",
+    "simple_english": "A dictionary section clarifying what key capitalized terms mean in this document.",
+    "simple_urdu": "معاہدے میں بار بار استعمال ہونے والے اہم الفاظ کے مخصوص معنی کی وضاحت۔",
+    "what_to_look_for": "Check if definitions like 'Services', 'Confidential Information', or 'Affiliates' are unexpectedly broad or narrow."
+  },
+  {
+    "clause": "Scope of Work",
+    "category": "Performance",
+    "meaning": "Details the specific services, activities, milestones, and boundaries of what one party will provide to the other.",
+    "simple_english": "Describes exactly what work or services will be done and what is excluded.",
+    "simple_urdu": "انجام دیے جانے والے کام، سروسز اور ذمہ داریوں کا مکمل احاطہ (دائرہ کار)۔",
+    "what_to_look_for": "Look out for vague descriptions or missing change-order procedures when tasks expand."
+  },
+  {
+    "clause": "Payment",
+    "category": "Commercial",
+    "meaning": "Establishes total compensation, billing rates, milestone schedules, currency, and reimbursement rules.",
+    "simple_english": "States how much money will be paid, in what currency, and under what conditions.",
+    "simple_urdu": "رقم کی کل مقدار، کرنسی اور ادائیگی کی بنیادی شرائط۔",
+    "what_to_look_for": "Ensure taxes, withholding, and expense reimbursements are explicitly assigned."
+  },
+  {
+    "clause": "Payment Terms",
+    "category": "Commercial",
+    "meaning": "Specifies invoice issuance timing, payment due periods (e.g., Net 30), and payment gateways or methods.",
+    "simple_english": "The exact timeline and rules for sending and paying bills.",
+    "simple_urdu": "انوائس جاری کرنے اور بل ادا کرنے کی مقررہ تاریخیں (جیسے 30 دن کی مہلت)۔",
+    "what_to_look_for": "Check whether failure to pay allows immediate work suspension."
+  },
+  {
+    "clause": "Term and Duration",
+    "category": "Duration",
+    "meaning": "Sets the effective start date and expiration date of the legal agreement.",
+    "simple_english": "Specifies when the contract begins and how long it remains active.",
+    "simple_urdu": "معاہدے کا آغاز اور اس کے نافذ العمل رہنے کی کل مدت۔",
+    "what_to_look_for": "Note the exact commencement date and whether it requires renewal or terminates automatically."
+  },
+  {
+    "clause": "Renewal",
+    "category": "Duration",
+    "meaning": "Governs how the agreement may continue after its initial expiration, either by affirmative agreement or auto-renewal.",
+    "simple_english": "Rules explaining how the contract rolls over into another term.",
+    "simple_urdu": "معاہدے کی مدت ختم ہونے کے بعد اس کی تجدید کا طریقہ کار۔",
+    "what_to_look_for": "Watch for evergreen auto-renewal clauses that lock you into another year if not cancelled 60-90 days in advance."
+  },
+  {
+    "clause": "Termination",
+    "category": "Duration",
+    "meaning": "The overarching framework detailing all legal grounds and mechanisms for cancelling the contract before natural expiry.",
+    "simple_english": "Explains all ways either party can legally exit the contract early.",
+    "simple_urdu": "معاہدے کو وقت سے پہلے باضابطہ ختم کرنے کی شرائط اور طریقہ۔",
+    "what_to_look_for": "Distinguish clearly between termination for convenience and termination for cause/breach."
+  },
+  {
+    "clause": "Termination for Convenience",
+    "category": "Duration",
+    "meaning": "Allows one or both parties to terminate the contract without needing to prove any fault, breach, or wrongdoing.",
+    "simple_english": "Ending the contract simply because you decide to, provided you give agreed advance notice.",
+    "simple_urdu": "بغیر کسی غلطی یا خلاف ورزی کے محض نوٹس دے کر معاہدہ ختم کرنے کا اختیار۔",
+    "what_to_look_for": "Check required advance notice days (e.g. 30 days) and whether early termination fees or sunk costs apply."
+  },
+  {
+    "clause": "Termination for Breach",
+    "category": "Duration",
+    "meaning": "Allows cancellation when the other party fails to perform or violates a material contractual duty.",
+    "simple_english": "Cancelling immediately because the other party broke a vital rule or failed to deliver.",
+    "simple_urdu": "دوسرے فریق کی وعدہ خلافی یا سنگین غلطی پر معاہدہ فوری ختم کرنے کا حق۔",
+    "what_to_look_for": "Check whether a 'cure period' (e.g. 15-30 days written notice to remedy) is mandated before termination."
+  },
+  {
+    "clause": "Confidentiality",
+    "category": "IP & Privacy",
+    "meaning": "Prohibits the disclosure or unauthorized commercial use of non-public business information shared during the relationship.",
+    "simple_english": "A binding rule that keeps shared business secrets and files private.",
+    "simple_urdu": "معاہدے کے دوران شیئر کی گئی نجی اور تجارتی معلومات کو صیغہ راز میں رکھنا۔",
+    "what_to_look_for": "Check the duration of the confidentiality obligation (e.g., 3 years vs. perpetual for trade secrets)."
+  },
+  {
+    "clause": "Non-Disclosure Agreement (NDA)",
+    "category": "IP & Privacy",
+    "meaning": "A standalone or incorporated covenant establishing duty of care for confidential materials and trade secrets.",
+    "simple_english": "A formal non-disclosure agreement guarding proprietary designs and talks.",
+    "simple_urdu": "رازداری کا باضابطہ معاہدہ جس کے تحت معلومات کا افشا ممنوع ہوتا ہے۔",
+    "what_to_look_for": "Ensure clear carve-outs exist for information already publicly known or subpoenaed by court."
+  },
+  {
+    "clause": "Indemnity",
+    "category": "Risk Allocation",
+    "meaning": "Obligates one party to legally defend, hold harmless, and reimburse the other against specified claims and liabilities.",
+    "simple_english": "A promise to pay for lawsuits or financial losses caused to the other party.",
+    "simple_urdu": "کسی فریق کے خلاف مقدمات یا نقصانات کا تمام تر مالی خرچ خود اٹھانے کی ضمانت۔",
+    "what_to_look_for": "Ensure indemnification is mutual and does not cover the other party's own negligence."
+  },
+  {
+    "clause": "Limitation of Liability",
+    "category": "Risk Allocation",
+    "meaning": "Caps monetary liability to a specified maximum and disclaims consequential, punitive, and indirect losses.",
+    "simple_english": "A legal ceiling capping how much money you can be sued for if a problem arises.",
+    "simple_urdu": "کسی نقصان کی صورت میں ادا کیے جانے والے ہرجانے کی زیادہ سے زیادہ حد مقرر کرنا۔",
+    "what_to_look_for": "Check if the cap equals total fees paid in the last 12 months, and verify if IP/confidentiality breaches are uncapped."
+  },
+  {
+    "clause": "Warranty",
+    "category": "Performance",
+    "meaning": "Contractual promises assuring that deliverables will function as specified and comply with professional standards.",
+    "simple_english": "A guarantee that the product or service works properly without defects.",
+    "simple_urdu": "سامان یا کام کے درست اور معیاری ہونے کی باضابطہ قانونی ضمانت۔",
+    "what_to_look_for": "Review warranty length (e.g. 90 days) and whether the exclusive remedy is repair or replacement."
+  },
+  {
+    "clause": "Force Majeure",
+    "category": "Risk Allocation",
+    "meaning": "Excuses or delays performance when extraordinary events beyond human anticipation and control occur.",
+    "simple_english": "Temporarily relieves parties from contract duties during floods, wars, earthquakes, or state shutdowns.",
+    "simple_urdu": "قدرتی آفات، جنگ یا ناگہانی واقعات کے دوران ذمہ داریوں میں عارضی چھوٹ۔",
+    "what_to_look_for": "Check whether financial distress is excluded and whether prolonged force majeure (>60 days) allows termination."
+  },
+  {
+    "clause": "Governing Law",
+    "category": "Legal & Forum",
+    "meaning": "Designates which legal jurisdiction's substantive body of jurisprudence will govern the contract interpretation.",
+    "simple_english": "Identifies which legal system's laws will judge any disputes.",
+    "simple_urdu": "وہ قانون جس کے تحت معاہدے کے قانونی معنی طے کیے جائیں گے۔",
+    "what_to_look_for": "Avoid unfamiliar or hostile jurisdictions that impose high foreign litigation costs."
+  },
+  {
+    "clause": "Jurisdiction and Venue",
+    "category": "Legal & Forum",
+    "meaning": "Designates the geographic courts that possess exclusive or non-exclusive power to hear disputes.",
+    "simple_english": "The exact court and city where a lawsuit must be filed.",
+    "simple_urdu": "وہ مخصوص عدالت اور شہر جہاں تنازعے کا مقدمہ دائر کیا جا سکتا ہے۔",
+    "what_to_look_for": "Check whether jurisdiction is 'exclusive' (mandatory) or 'non-exclusive'."
+  },
+  {
+    "clause": "Dispute Resolution",
+    "category": "Legal & Forum",
+    "meaning": "A staged process outlining escalation steps (executive meeting -> mediation -> arbitration/court).",
+    "simple_english": "The procedural roadmap for resolving conflicts before heading to trial.",
+    "simple_urdu": "تنازعات کے مرحلہ وار حل کا طے شدہ راستہ (مذاکرات، پھر ثالثی، پھر عدالت)۔",
+    "what_to_look_for": "Look for mandatory cool-off periods and requirement to attempt friendly negotiation first."
+  },
+  {
+    "clause": "Arbitration",
+    "category": "Legal & Forum",
+    "meaning": "Replaces public courtroom trials with a private, binding hearing before one or three selected arbitrators.",
+    "simple_english": "Private justice system replacing open court trials with a final arbitrator's decision.",
+    "simple_urdu": "عدالت کے بجائے باہمی ثالثی کے ذریعے حتمی اور لازمی فیصلہ کروانا۔",
+    "what_to_look_for": "Check who pays arbitration fees, the seat of arbitration, and the designated arbitration rules."
+  },
+  {
+    "clause": "Mediation",
+    "category": "Legal & Forum",
+    "meaning": "A confidential, non-binding negotiation step facilitated by a certified third party prior to litigation.",
+    "simple_english": "A confidential meeting with a neutral mediator to attempt a friendly compromise.",
+    "simple_urdu": "مقدمہ بازی سے پہلے غیر جانبدار ثالث کی مدد سے سمجھوتے کی کوشش۔",
+    "what_to_look_for": "Ensure mediation costs are split 50/50 and that it has a strict time limit (e.g. 30 days)."
+  },
+  {
+    "clause": "Intellectual Property Ownership",
+    "category": "IP & Privacy",
+    "meaning": "Allocates ownership of pre-existing background IP versus newly created foreground work products.",
+    "simple_english": "Decides who owns the copyrights, code, inventions, and brand assets created during the project.",
+    "simple_urdu": "معاہدے کے دوران بننے والے سافٹ ویئر، کوڈ اور ایجادات کی حتمی ملکیت کا تعین۔",
+    "what_to_look_for": "Ensure service providers don't inadvertently surrender ownership of their pre-existing proprietary tools."
+  },
+  {
+    "clause": "Assignment and Subcontracting",
+    "category": "Boilerplate",
+    "meaning": "Restricts parties from delegating their duties or transferring their agreement to third parties without consent.",
+    "simple_english": "Rules regarding whether you can outsource the work or hand the contract over to someone else.",
+    "simple_urdu": "کام کسی تیسرے فریق سے کروانے یا معاہدہ کسی اور کے نام منتقل کرنے کی شرائط۔",
+    "what_to_look_for": "Check if consent to assignment cannot be unreasonably withheld during mergers or acquisitions."
+  },
+  {
+    "clause": "Amendment and Modification",
+    "category": "Boilerplate",
+    "meaning": "Mandates that changes to the contract are only enforceable if made in writing and signed by authorized representatives.",
+    "simple_english": "Requires all changes or additions to be in writing and signed.",
+    "simple_urdu": "معاہدے میں کسی بھی تبدیلی کے لیے تحریری اور باضابطہ دستخط شدہ دستاویز کی شرط۔",
+    "what_to_look_for": "Confirms that verbal promises, Slack messages, or informal emails cannot alter the contract."
+  },
+  {
+    "clause": "Waiver",
+    "category": "Boilerplate",
+    "meaning": "Clarifies that choosing not to enforce a breach on one occasion does not surrender the right to enforce it later.",
+    "simple_english": "Overlooking one mistake does not mean you give up your rights permanently.",
+    "simple_urdu": "ایک بار معاف کر دینے یا رعایت دینے سے مستقبل کے قانونی حقوق ختم نہ ہونے کا اصول۔",
+    "what_to_look_for": "Ensure waivers must be in writing to be legally recognized."
+  },
+  {
+    "clause": "Severability",
+    "category": "Boilerplate",
+    "meaning": "Instructs courts to strike down or reform invalid terms while enforcing the remaining terms of the agreement.",
+    "simple_english": "If one sentence is deemed illegal by a court, the rest of the contract stays alive.",
+    "simple_urdu": "کسی ایک شق کے غیر قانونی ہونے پر پورا معاہدہ ختم ہونے کے بجائے باقی برقرار رہے گا۔",
+    "what_to_look_for": "Look for language encouraging courts to modify the invalid clause to the minimum necessary extent."
+  },
+  {
+    "clause": "Entire Agreement",
+    "category": "Boilerplate",
+    "meaning": "States that the written contract contains the entire bargain, voiding all prior drafts, emails, and conversations.",
+    "simple_english": "Confirms that this written document is the final complete word; past discussions don't count.",
+    "simple_urdu": "یہ تحریر ہی حتمی اور مکمل معاہدہ ہے، سابقہ تمام زبانی یا تحریری وعدے ختم ہو چکے ہیں۔",
+    "what_to_look_for": "Ensure any critical promise made during sales talks is actually written into the text."
+  },
+  {
+    "clause": "Notice",
+    "category": "Formalities",
+    "meaning": "Specifies formal delivery mechanisms, valid addresses, and receipt presumptions for all legal notices.",
+    "simple_english": "The official rules for sending legal letters, emails, or warnings under the contract.",
+    "simple_urdu": "قانونی نوٹس یا خط بھیجنے کا مستند اور منظور شدہ طریقہ کار۔",
+    "what_to_look_for": "Check whether notices sent by regular email are officially permitted or if certified physical mail is required."
+  },
+  {
+    "clause": "Insurance",
+    "category": "Risk Allocation",
+    "meaning": "Obligates one or both parties to maintain commercial general liability, professional indemnity, or cyber insurance.",
+    "simple_english": "Requires carrying specific business insurance policies to protect against disasters.",
+    "simple_urdu": "کاروباری نقصان یا حادثات سے نمٹنے کے لیے مخصوص انشورنس پالیسی رکھنے کی پابندی۔",
+    "what_to_look_for": "Verify mandatory minimum coverage dollar limits and requirement to name the other party as additional insured."
+  },
+  {
+    "clause": "Compliance with Laws",
+    "category": "Performance",
+    "meaning": "Binds both parties to comply with all applicable local, national, export, labor, and anti-bribery statutes.",
+    "simple_english": "A pledge that both sides will follow all applicable laws and government regulations.",
+    "simple_urdu": "تمام ملکی اور بین الاقوامی قوانین اور ضوابط پر عمل کرنے کا عہد۔",
+    "what_to_look_for": "Check whether compliance obligations extend to subcontractor labor standards and anti-corruption."
+  },
+  {
+    "clause": "Data Protection and Privacy",
+    "category": "IP & Privacy",
+    "meaning": "Governs data security practices, data breach disclosures, and regulatory compliance regarding user records.",
+    "simple_english": "Rules ensuring user and customer private data is kept secure and not stolen.",
+    "simple_urdu": "صارفین کے ذاتی اور نجی ڈیٹا کی مکمل سیکیورٹی اور حفاظت کا وعدہ۔",
+    "what_to_look_for": "Look for notification timeframes in case of a security breach (e.g. within 48 to 72 hours)."
+  },
+  {
+    "clause": "Non-Compete and Non-Solicitation",
+    "category": "Restrictive Covenants",
+    "meaning": "Restricts post-contract competition and prohibits poaching staff or customers for a defined duration and territory.",
+    "simple_english": "Restrictions preventing you from working for rivals or poaching clients and staff.",
+    "simple_urdu": "مخالف کمپنی میں کام نہ کرنے اور گاہکوں یا عملے کو نہ توڑنے کی پابندی۔",
+    "what_to_look_for": "Assess whether geographic radius and time duration (e.g. 1-2 years) are overly restrictive or enforceable."
+  },
+  {
+    "clause": "Survival",
+    "category": "Duration",
+    "meaning": "Lists specific clauses (like confidentiality, liability caps, indemnity, and dispute resolution) that remain alive after termination.",
+    "simple_english": "Clauses that remain in full effect even after the contract is cancelled or finished.",
+    "simple_urdu": "وہ شقیں جو معاہدہ ختم ہونے کے بعد بھی دونوں فریقین پر لاگو رہتی ہیں (جیسے رازداری)۔",
+    "what_to_look_for": "Check if confidentiality and indemnities survive indefinitely or for a set period."
+  },
+  {
+    "clause": "Acceptance and Inspection",
+    "category": "Performance",
+    "meaning": "Defines the testing and review window during which a client may test deliverables and issue rejection or acceptance.",
+    "simple_english": "The inspection period to check if the work was done right before final sign-off.",
+    "simple_urdu": "کام کی جانچ پڑتال اور اسے باضابطہ قبول یا مسترد کرنے کی مقررہ مہلت۔",
+    "what_to_look_for": "Watch for deemed acceptance clauses where failing to respond within 10 days counts as automatic full approval."
+  },
+  {
+    "clause": "Late Payment and Interest",
+    "category": "Commercial",
+    "meaning": "Authorizes interest charges (e.g., 1.5% per month) on overdue balances and recovery of collection expenses.",
+    "simple_english": "Extra interest fees charged if bills are not paid on time.",
+    "simple_urdu": "تاخیر سے کی جانے والی ادائیگیوں پر اضافی سود یا جرمانہ۔",
+    "what_to_look_for": "Ensure interest rates comply with statutory limits and do not constitute an illegal punitive interest rate."
+  },
+  {
+    "clause": "Subcontracting",
+    "category": "Performance",
+    "meaning": "Regulates whether a contractor may hire external third-party agencies or freelancers to perform obligations.",
+    "simple_english": "Whether the provider can delegate work to freelancers or third-party firms.",
+    "simple_urdu": "کام کسی ذیلی ٹھیکیدار یا فری لانسر کو سونپنے کی اجازت اور شرائط۔",
+    "what_to_look_for": "Ensure the primary contractor remains 100% financially and operationally liable for subcontractor acts."
+  },
+  {
+    "clause": "Audit and Inspection Rights",
+    "category": "Compliance & Operational",
+    "meaning": "Grants one party (e.g. client, licensor, or regulator) the legal right to inspect financial books, operational records, and facilities of the other party to ensure compliance.",
+    "simple_english": "Allows the other party to check your books, invoices, or premises to make sure you are following the rules.",
+    "simple_urdu": "حسابات اور دفاتر کی تفتیش و آڈٹ کا حق تاکہ معاہدے کی پاسداری کی جانچ کی جا سکے۔",
+    "what_to_look_for": "Check frequency limits (e.g. once per year during normal business hours), advance notice requirements, and who pays the audit costs if no discrepancies are discovered."
+  },
+  {
+    "clause": "Non-Disparagement",
+    "category": "Restrictive Covenants",
+    "meaning": "Prohibits parties from making negative, derogatory, or defamatory statements (verbally, in print, or online) about the other party, its management, or its products.",
+    "simple_english": "A mutual promise not to badmouth, criticize, or post damaging public comments about each other.",
+    "simple_urdu": "ایک دوسرے کی ساکھ کو نقصان نہ پہنچانے یا عوامی سطح پر برائی نہ کرنے کا پابند معاہدہ۔",
+    "what_to_look_for": "Ensure the clause is strictly mutual (protecting both sides) and explicitly excludes truthful disclosures mandated by legal subpoenas or court testimony."
+  },
+  {
+    "clause": "Equitable Relief and Injunctions",
+    "category": "Remedies",
+    "meaning": "Stipulates that monetary damages would be inadequate to remedy a breach of confidentiality, IP, or restrictive covenants, granting immediate access to emergency court injunctions.",
+    "simple_english": "Agrees in advance that if secrets or IP are stolen, money isn't enough and a court can order an immediate halt.",
+    "simple_urdu": "اس امر کا اقرار کہ خلاف ورزی کی صورت میں مالی معاوضہ کافی نہیں ہوگا بلکہ فوری حکمِ امتناعی حاصل کیا جا سکتا ہے۔",
+    "what_to_look_for": "Look out for clauses that waive the requirement to post an injunction bond or waive your right to contest the emergency order."
+  },
+  {
+    "clause": "Cumulative Remedies",
+    "category": "Remedies",
+    "meaning": "Provides that rights and legal remedies specified in the contract are additive and do not preclude or replace any other remedies available under general law or equity.",
+    "simple_english": "Means using one legal remedy does not stop the party from pursuing all other legal options available.",
+    "simple_urdu": "مجموعی قانونی چارہ جوئی کا حق، یعنی ایک حق استعمال کرنے سے دیگر قانونی راستے بند نہیں ہوتے۔",
+    "what_to_look_for": "Check whether this conflicts with explicit exclusive remedy clauses (e.g., where liquidated damages or warranty repairs are agreed to be the sole remedy)."
+  },
+  {
+    "clause": "Counterparts and Electronic Signatures",
+    "category": "Execution",
+    "meaning": "Allows the agreement to be signed in multiple identical copies, by separate parties at different times and locations, and affirms legal validity of digital/electronic signatures.",
+    "simple_english": "Both sides don't need to be in the same room or use the same physical sheet; DocuSign or scanned copies are 100% legally binding.",
+    "simple_urdu": "الگ الگ کاپیوں پر اور الیکٹرانک / ڈیجیٹل دستخطوں کی قانونی حیثیت کی باضابطہ منظوری۔",
+    "what_to_look_for": "Ensure digital signature platforms comply with applicable Electronic Transactions Acts or local registry requirements."
+  },
+  {
+    "clause": "Successors and Assigns",
+    "category": "Lifecycle & Parties",
+    "meaning": "Extends the binding obligations and benefits of the agreement to future heirs, corporate acquirers, executors, and permitted legal assignees of each party.",
+    "simple_english": "The contract remains valid and binding on whoever takes over the company or inherits the assets in the future.",
+    "simple_urdu": "معاہدے کی پابندی مستقبل میں آنے والے قانونی وارثوں، جانشینوں اور خریداروں پر بھی لاگو ہوگی۔",
+    "what_to_look_for": "Verify that this clause does not inadvertently permit unapproved transfers without adhering to the explicit Assignment clause."
+  },
+  {
+    "clause": "Liquidated Damages",
+    "category": "Remedies",
+    "meaning": "Fixes a predetermined monetary sum payable as compensation upon a specific contractual breach (such as daily penalties for delayed delivery).",
+    "simple_english": "A predetermined penalty amount to be paid for every day or event of delay or default.",
+    "simple_urdu": "معاہدے میں پہلے سے مقرر کردہ ہرجانہ جو تاخیر یا خلاف ورزی کی صورت میں ادا کرنا لازم ہوگا۔",
+    "what_to_look_for": "Ensure there is a reasonable overall cap on liquidated damages (e.g. max 10% of total contract value) to avoid crippling financial exposure."
+  },
+  {
+    "clause": "Time of the Essence",
+    "category": "Performance",
+    "meaning": "Declares that strict adherence to stated performance dates and deadlines is a fundamental condition, making any minor delay an immediate material breach.",
+    "simple_english": "Deadlines are non-negotiable; missing a date by even one day is treated as a major contract breach.",
+    "simple_urdu": "وقت کی پابندی انتہائی بنیادی شرط ہے؛ معمولی تاخیر بھی سنگین خلاف ورزی تصور ہوگی۔",
+    "what_to_look_for": "If you are the service provider, avoid this clause or ensure reasonable cure periods and force majeure exclusions apply."
+  },
+  {
+    "clause": "Further Assurances",
+    "category": "Cooperation",
+    "meaning": "Obligates both parties to sign any additional legal documents, certificates, or execute further steps reasonably necessary to give full effect to the agreement.",
+    "simple_english": "Both parties agree to cooperate and sign any extra paperwork needed to finalize the deal later.",
+    "simple_urdu": "معاہدے کے مقاصد کو پورا کرنے کے لیے مستقبل میں مزید ضروری دستاویزات پر دستخط کرنے کی یقین دہانی۔",
+    "what_to_look_for": "Specify that such further acts must be at the requesting party's reasonable expense."
+  },
+  {
+    "clause": "Anti-Bribery and Anti-Corruption",
+    "category": "Compliance & Operational",
+    "meaning": "Requires strict compliance with anti-graft laws (such as the UK Bribery Act, US FCPA, or local anti-corruption statutes), forbidding illicit kickbacks or bribes.",
+    "simple_english": "A strict prohibition against paying bribes, kickbacks, or gifts to public officials or corporate decision-makers.",
+    "simple_urdu": "رشوت ستانی اور غیر قانونی کمیشن کے خلاف سخت پابندی کا بین الاقوامی قانونی تقاضا۔",
+    "what_to_look_for": "Look out for immediate termination rights triggered upon mere investigation or unproven allegation."
+  },
+  {
+    "clause": "Change of Control",
+    "category": "Lifecycle & Parties",
+    "meaning": "Dictates what happens if a contracting party is acquired, merged, sold, or undergoes a majority ownership change, often granting the other party an exit right.",
+    "simple_english": "Explains what happens if your company is sold or taken over by a new owner or competitor.",
+    "simple_urdu": "کمپنی کی ملکیت یا انتظام تبدیل ہونے کی صورت میں معاہدے پر اثرات اور فریق ثانی کا حقِ تنسیخ۔",
+    "what_to_look_for": "Check if a corporate restructuring or venture funding round unintentionally triggers a right for clients to walk away."
+  },
+  {
+    "clause": "Set-Off Rights",
+    "category": "Commercial",
+    "meaning": "Allows a party to deduct any monies, damages, or claims owed to them from the amounts they owe to the other party under the contract.",
+    "simple_english": "The right to deduct money you are owed from the bills you have to pay the other party.",
+    "simple_urdu": "رقم کا باہمی کٹاؤ، یعنی اپنے واجب الادا بلوں میں سے مطلوبہ ہرجانہ یا قرض کاٹ کر بقایا ادا کرنا۔",
+    "what_to_look_for": "Service providers should insist on 'no set-off' clauses to prevent clients from withholding fees over disputed collateral claims."
+  },
+  {
+    "clause": "No Third-Party Beneficiaries",
+    "category": "Foundations",
+    "meaning": "Confirms that the contract is solely for the benefit of the signing parties and no outside third party acquires any rights to enforce any provision.",
+    "simple_english": "Only the actual people or companies signing have legal rights; outside strangers cannot enforce this agreement.",
+    "simple_urdu": "تیسرے فریق کا حق نہ ہونا؛ معاہدے کے حقوق صرف اصل دستخط کنندگان تک محدود ہیں۔",
+    "what_to_look_for": "Ensure affiliates, officers, or indemnitees are explicitly carved out if they need direct protection."
+  },
+  {
+    "clause": "Export Control and Sanctions Compliance",
+    "category": "Compliance & Operational",
+    "meaning": "Prohibits the export, re-export, transfer, or provision of services/software to sanctioned countries, prohibited entities, or individuals on governmental embargo lists.",
+    "simple_english": "Rules forbidding the transfer of goods, tech, or funds to sanctioned nations or banned organizations.",
+    "simple_urdu": "بین الاقوامی تجارتی پابندیوں اور برآمدی ضوابط کی مکمل پابندی کا عہد۔",
+    "what_to_look_for": "Ensure compliance representations are limited to applicable laws of relevant jurisdictions."
+  },
+  {
+    "clause": "Relationship of the Parties (Independent Contractor)",
+    "category": "Foundations",
+    "meaning": "Affirms that the parties are independent contractors and nothing creates a legal partnership, joint venture, agency, or employment relationship.",
+    "simple_english": "Clarifies that you are an independent contractor, not an employee, business partner, or legal agent.",
+    "simple_urdu": "فریقین کی خودمختار حیثیت کی توثیق کہ کوئی ملازمتی یا باہمی شراکت داری کا رشتہ وجود میں نہیں آیا۔",
+    "what_to_look_for": "Critical to shield against vicarious tort liability and statutory employment benefit claims."
+  },
+  {
+    "clause": "Severability and Judicial Reformation",
+    "category": "Interpretation & Boilerplate",
+    "meaning": "Provides that if any clause is found invalid or unlawful, the court is authorized to modify ('blue-pencil') it to the minimum extent necessary to make it lawful and preserve the remainder.",
+    "simple_english": "If a judge invalidates one sentence, the rest of the contract stays alive, and the judge may rewrite that part to make it legal.",
+    "simple_urdu": "ناجائز شق کا اخراج اور عدالتی ترمیم تاکہ باقی تمام معاہدہ مکمل طور پر نافذ العمل رہے۔",
+    "what_to_look_for": "Verify whether an essential clause (like payment or IP) being voided entitles either party to terminate."
+  },
+  {
+    "clause": "Force Majeure Mitigation and Notice",
+    "category": "Risk Allocation & Exceptions",
+    "meaning": "Sets explicit deadlines (e.g. within 5 business days) for notifying the other party of an uncontrollable event and mandates continuous good-faith efforts to mitigate delays.",
+    "simple_english": "If an act of God halts work, you must notify the client quickly in writing and take all reasonable steps to resume soon.",
+    "simple_urdu": "ناگہانی آفات کی فوری تحریری اطلاع اور نقصان کو کم سے کم کرنے کے عملی اقدامات کی شرط۔",
+    "what_to_look_for": "Check how many days of continuous force majeure (e.g. 60 or 90 days) permits either party to cancel without penalty."
+  }
+]

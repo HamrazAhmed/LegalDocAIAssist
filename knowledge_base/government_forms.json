@@ -1,0 +1,283 @@
+[
+  {
+    "form_type": "Affidavit / Statutory Declaration",
+    "purpose": "A sworn written statement of fact made under oath before an authorized officer (e.g. Oath Commissioner, Notary Public).",
+    "common_fields": [
+      {
+        "field_name": "Deponent / Declarant Name",
+        "description": "Full legal name of the person giving the sworn statement under penalty of perjury.",
+        "simple_urdu": "بیان حلفی دینے والے شخص کا مکمل قانونی نام۔"
+      },
+      {
+        "field_name": "CNIC / National Identity / Passport Number",
+        "description": "Official national identity registration number of the deponent.",
+        "simple_urdu": "قومی شناختی کارڈ یا پاسپورٹ نمبر۔"
+      },
+      {
+        "field_name": "Verification / Attestation",
+        "description": "Formal clause affirming that contents of the affidavit are true and correct to the best of knowledge.",
+        "simple_urdu": "تصدیقی بیان کہ جو کچھ درج ہے وہ سچ ہے اور کچھ چھپایا نہیں گیا۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Original National ID / Passport",
+      "Witness signatures with valid identity copies",
+      "Official Stamp of Notary Public or Oath Commissioner"
+    ],
+    "important_notes": "Never sign a blank affidavit. Knowingly false statements in an affidavit constitute the criminal offense of perjury."
+  },
+  {
+    "form_type": "Power of Attorney (General / Special)",
+    "purpose": "A legal instrument authorizing one designated person (the agent/attorney) to act on behalf of another (the principal).",
+    "common_fields": [
+      {
+        "field_name": "Principal",
+        "description": "The person granting legal authority to someone else.",
+        "simple_urdu": "وہ شخص جو دوسرے کو اپنے معاملات کا اختیار سونپ رہا ہے (موکل)۔"
+      },
+      {
+        "field_name": "Attorney-in-Fact / Agent",
+        "description": "The trusted person authorized to exercise the legal powers on behalf of the principal.",
+        "simple_urdu": "وہ شخص جس کو کام کرنے کا باضابطہ اختیار سونپا جا رہا ہے (مختارِ عام یا خاص)۔"
+      },
+      {
+        "field_name": "Specific Powers Granted",
+        "description": "Exact enumerations of permitted acts (e.g., property management, banking, court representation).",
+        "simple_urdu": "سونپے گئے مخصوص اختیارات کی تفصیل۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Valid Identity documents for Principal and Attorney",
+      "Two adult witnesses with identity copies",
+      "Official Registration / Stamp Paper where required by local registry laws"
+    ],
+    "important_notes": "A Special Power of Attorney is safer than a General Power of Attorney as it restricts authority to specific named transactions."
+  },
+  {
+    "form_type": "Business Registration / Tax Identification (NTN/EIN)",
+    "purpose": "Official administrative application form for obtaining corporate identity or tax enrollment.",
+    "common_fields": [
+      {
+        "field_name": "Entity Legal Structure",
+        "description": "Sole proprietorship, partnership (AOP), or limited liability company.",
+        "simple_urdu": "کاروبار کی قانونی حیثیت (انفرادی، شراکت داری یا کمپنی)۔"
+      },
+      {
+        "field_name": "Registered Business Address",
+        "description": "Physical commercial premises where official notices will be served.",
+        "simple_urdu": "کاروبار کا باضابطہ رجسٹرڈ پتہ۔"
+      },
+      {
+        "field_name": "Principal Business Activity",
+        "description": "Standard industrial classification code or description of primary commercial operations.",
+        "simple_urdu": "کاروبار یا سروسز کی بنیادی نوعیت۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Utility bills of commercial premises / Rent agreement",
+      "Bank maintenance certificate",
+      "Directors or Partners CNIC / Identity cards"
+    ],
+    "important_notes": "Verify regulatory filing deadlines to avoid initial late-filing non-compliance penalties."
+  },
+  {
+    "form_type": "Residential / Commercial Tenancy Agreement (Lease / Kirayanama)",
+    "purpose": "A legal contract granting occupancy of real property by a landlord to a tenant for a specified duration in exchange for periodic rent payments.",
+    "common_fields": [
+      {
+        "field_name": "Lessor / Landlord Details",
+        "description": "Full legal name, CNIC/Passport, and ownership proof of the property owner.",
+        "simple_urdu": "مالک مکان یا جائیداد کے مالک کا مکمل نام اور شناختی کوائف۔"
+      },
+      {
+        "field_name": "Lessee / Tenant Details",
+        "description": "Full legal name, national identity number, and permanent address of the tenant.",
+        "simple_urdu": "کرایہ دار کا مکمل قانونی نام اور مستقل پتہ۔"
+      },
+      {
+        "field_name": "Premises Schedule & Description",
+        "description": "Complete physical address, plot number, covered area, and fixtures included in the tenancy.",
+        "simple_urdu": "کرائے پر دی جانے والی جائیداد کا مکمل پتہ اور حدودِ اربعہ۔"
+      },
+      {
+        "field_name": "Monthly Rent & Escalation Rate",
+        "description": "Agreed monthly rental amount, due date (e.g. 5th of each month), and annual percentage increase (typically 10%).",
+        "simple_urdu": "ماہانہ کرایہ، تاریخِ ادائیگی اور سالانہ اضافے کی شرح (جیسے دس فیصد)۔"
+      },
+      {
+        "field_name": "Security Deposit / Advance Rent",
+        "description": "Refundable security deposit amount held against damage or unpaid utility bills.",
+        "simple_urdu": "زرِ ضمانت (سیکیورٹی ڈپازٹ) جو معاہدے کے خاتمے پر قابلِ واپسی ہوگی۔"
+      },
+      {
+        "field_name": "Maintenance & Utility Responsibilities",
+        "description": "Allocation of structural repairs to landlord vs day-to-day minor repairs and utilities to tenant.",
+        "simple_urdu": "بجلی، گیس، پانی کے بلوں اور عمارت کی مرمت کی ذمہ داریوں کی تقسیم۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Original or Certified Copy of Title Deed / Registry / Allotment Letter",
+      "Valid CNIC copies of Landlord, Tenant, and two respectable witnesses",
+      "Police Station Tenant Verification Form / Clearance Certificate",
+      "Prescribed Stamp Paper of appropriate value according to the Stamp Act"
+    ],
+    "important_notes": "Under Tenancy Acts, registration of the tenancy agreement with the local Rent Tribunal or Rent Registrar is legally mandatory for enforcement of summary eviction procedures."
+  },
+  {
+    "form_type": "SECP Form 29 (Particulars of Directors, Officers & Auditors)",
+    "purpose": "Statutory corporate return filed with the Securities and Exchange Commission notifying appointments, resignations, or changes of corporate directors and officers.",
+    "common_fields": [
+      {
+        "field_name": "Corporate Universal Identification Number (CUIN)",
+        "description": "Official company registration number assigned by the corporate registry.",
+        "simple_urdu": "کمپنی کا کارپوریٹ رجسٹریشن نمبر۔"
+      },
+      {
+        "field_name": "Full Legal Name of the Company",
+        "description": "Exact name of the registered corporate entity as stated on the Certificate of Incorporation.",
+        "simple_urdu": "کمپنی کا باضابطہ رجسٹرڈ نام۔"
+      },
+      {
+        "field_name": "Name & CNIC/Passport of Appointee/Outgoing Officer",
+        "description": "Identity and nationality details of the incoming or resigning director/CEO.",
+        "simple_urdu": "عہدے پر فائز ہونے والے یا مستعفی ڈائریکٹر یا چیف ایگزیکٹو کا نام اور شناختی نمبر۔"
+      },
+      {
+        "field_name": "Date of Appointment / Cessation",
+        "description": "Exact calendar date when the appointment took effect or resignation was accepted.",
+        "simple_urdu": "تقرری یا استعفے کی حتمی تاریخ۔"
+      },
+      {
+        "field_name": "Mode of Change / Board Resolution Reference",
+        "description": "Reference to Board of Directors resolution or AGM election approving the change.",
+        "simple_urdu": "بورڈ کی قرارداد یا اجلاس کا حوالہ جس میں یہ فیصلہ منظور ہوا۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Certified Copy of Board Resolution or AGM Minutes",
+      "Consent to Act as Director (Form 28)",
+      "CNIC/Passport copy of the new Director",
+      "Official payment receipt of SECP filing fees"
+    ],
+    "important_notes": "Statutory corporate laws mandate filing Form 29 within 14 to 15 days of any change in the board of directors; late filings attract statutory penal surcharges."
+  },
+  {
+    "form_type": "Deed of Sale of Immovable Property (Sale Deed / Bayanama)",
+    "purpose": "A registered deed effecting the absolute and irrevocable legal transfer of ownership of real estate from seller to buyer for valuable consideration.",
+    "common_fields": [
+      {
+        "field_name": "Vendor / Seller Details",
+        "description": "Full name, parentage, CNIC, and current residential address of the lawful titleholder.",
+        "simple_urdu": "فروخت کنندہ (بائع) کا مکمل نام، ولدیت اور شناختی کارڈ نمبر۔"
+      },
+      {
+        "field_name": "Vendee / Purchaser Details",
+        "description": "Full name, parentage, CNIC, and permanent address of the incoming buyer.",
+        "simple_urdu": "خریدار (مشتری) کا مکمل نام، ولدیت اور قومی شناختی نمبر۔"
+      },
+      {
+        "field_name": "Property Schedule & Four Boundaries",
+        "description": "Exact demarcations: North, South, East, West boundaries, Khasra/Plot number, and registry records.",
+        "simple_urdu": "جائیداد کے حدودِ اربعہ، خسرہ یا پلاٹ نمبر اور رقبے کی تفصیل۔"
+      },
+      {
+        "field_name": "Total Sale Consideration & Payment Receipt",
+        "description": "The exact monetary price paid, pay-order/bank cheque numbers, and full acknowledgment of receipt.",
+        "simple_urdu": "فروخت کی کل رقم، پے آرڈر یا بینک چیک کی تفصیل اور وصولی کی تصدیق۔"
+      },
+      {
+        "field_name": "Clear Title & Indemnity Warranty",
+        "description": "Seller's sworn covenant that the property is free from all mortgages, liens, disputes, or tax claims.",
+        "simple_urdu": "مالک کی طرف سے ضمانت کہ جائیداد ہر قسم کے تنازعے اور قرض سے پاک ہے۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Fard Malkiat / Ownership Mutation Certificate from Revenue Office",
+      "No Objection Certificate (NOC) from Housing Authority or Municipal Council",
+      "E-Stamp Paper of requisite value based on DC valuation table",
+      "Tax payment receipts (Section 236K / 236C withholding tax)",
+      "Two adult male witnesses with original CNICs"
+    ],
+    "important_notes": "A Sale Deed of immovable property worth over Rs. 100 must be compulsorily registered before the Sub-Registrar under the Registration Act to convey legal title."
+  },
+  {
+    "form_type": "Partnership Deed (Form A / Form B Registration)",
+    "purpose": "A founding constitutional deed between two or more partners establishing rights, profit-sharing ratios, capital contributions, and operational rules of a partnership firm.",
+    "common_fields": [
+      {
+        "field_name": "Firm Legal Name & Principal Office",
+        "description": "The trade name under which business is conducted and the headquarters address.",
+        "simple_urdu": "شراکت داری فرم کا تجارتی نام اور مرکزی دفتر کا پتہ۔"
+      },
+      {
+        "field_name": "Nature and Scope of Business",
+        "description": "Specific commercial activities and services authorized under the partnership.",
+        "simple_urdu": "کاروبار اور تجارتی سرگرمیوں کی نوعیت۔"
+      },
+      {
+        "field_name": "Capital Contribution Ratio",
+        "description": "Amount of money, property, or equipment invested by each individual partner.",
+        "simple_urdu": "ہر شریک کا لگایا گیا سرمایہ اور اس کی مالی شرح۔"
+      },
+      {
+        "field_name": "Profit and Loss Sharing Percentage",
+        "description": "The exact contractual percentage for distribution of net profits and absorption of financial losses.",
+        "simple_urdu": "نفع اور نقصان کی باہمی تقسیم کا تناسب۔"
+      },
+      {
+        "field_name": "Bank Operations & Signatory Authority",
+        "description": "Specification whether bank accounts require joint signatures or sole partner operations.",
+        "simple_urdu": "بینک اکاؤنٹس چلانے اور دستخط کرنے کا اختیار۔"
+      },
+      {
+        "field_name": "Dissolution & Retirement Procedures",
+        "description": "Rules for goodwill valuation, accounts settlement, and dissolution notices.",
+        "simple_urdu": "فرم کے خاتمے یا کسی شریک کی علیحدگی کی صورت میں حساب کتاب کا طریقہ کار۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Non-judicial stamp paper of prescribed state stamp duty value",
+      "Attested CNIC copies of all partners and witnesses",
+      "Rent agreement or ownership proof of principal commercial premises",
+      "Form I registration application submitted to the Registrar of Firms"
+    ],
+    "important_notes": "Unregistered partnership firms are legally barred under the Partnership Act from filing lawsuits in court to enforce contractual claims against third parties."
+  },
+  {
+    "form_type": "Employment Agreement / Letter of Appointment",
+    "purpose": "A legally binding contract between an employer and employee defining job duties, compensation, benefits, termination rules, and confidentiality.",
+    "common_fields": [
+      {
+        "field_name": "Job Title & Reporting Line",
+        "description": "Official designation and direct managerial reporting line.",
+        "simple_urdu": "ملازمت کا عہدہ اور ڈائریکٹ رپورٹنگ مینیجر۔"
+      },
+      {
+        "field_name": "Gross Salary & Allowances",
+        "description": "Detailed compensation breakdown: basic salary, house rent, medical allowance, and bonuses.",
+        "simple_urdu": "تنخواہ، الاؤنسز اور دیگر مالی مراعات کی تفصیل۔"
+      },
+      {
+        "field_name": "Probationary Period",
+        "description": "Initial evaluation duration (typically 3 to 6 months) during which termination requires shorter notice.",
+        "simple_urdu": "آزمائشی مدت (پروبیشن پیریڈ) جس میں کارکردگی کا جائزہ لیا جاتا ہے۔"
+      },
+      {
+        "field_name": "Termination Notice & Severance",
+        "description": "Required written notice period (e.g. 30 days) or payment of salary in lieu of notice.",
+        "simple_urdu": "ملازمت ختم کرنے کا تحریری نوٹس پیریڈ یا اس کے بدلے تنخواہ کی ادائیگی۔"
+      },
+      {
+        "field_name": "Intellectual Property Assignment",
+        "description": "Clause vesting full ownership of all patents, software, designs, and code created on the job into the employer.",
+        "simple_urdu": "دورانِ ملازمت تخلیق کردہ تمام سافٹ ویئر اور ایجادات کے حقوق کمپنی کو سونپنا۔"
+      }
+    ],
+    "typical_supporting_docs": [
+      "Educational degrees and professional qualification certificates",
+      "Previous employer relieving certificate / experience letters",
+      "CNIC copy and criminal background verification"
+    ],
+    "important_notes": "Statutory labor and employment laws supersede contractual terms that fall below minimum wage, maximum working hours, or statutory leave entitlements."
+  }
+]

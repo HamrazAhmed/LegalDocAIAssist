@@ -1,0 +1,47 @@
+MUTUAL NON-DISCLOSURE AND CONFIDENTIALITY AGREEMENT
+
+This Mutual Non-Disclosure Agreement ("Agreement") is entered into as of March 1, 2025 ("Effective Date"), by and between:
+ALPHA FINTECH INNOVATIONS LIMITED, having its principal office at 14 Blue Area, Islamabad ("Party A"), and
+DELTA CAPITAL VENTURES LLP, having its principal office at 78 Clifton Block 4, Karachi ("Party B").
+
+Each of Party A and Party B may be referred to individually as a "Party" and collectively as the "Parties," and as a "Disclosing Party" or "Receiving Party" respectively.
+
+1. PURPOSE
+The Parties wish to explore potential business collaboration and investment opportunities in digital payment infrastructure ("Purpose"). In connection with this Purpose, each Party may disclose proprietary commercial and technical information.
+
+2. DEFINITION OF CONFIDENTIAL INFORMATION
+"Confidential Information" means all non-public information disclosed directly or indirectly by Disclosing Party to Receiving Party, whether orally, visually, or in writing, including but not limited to business plans, financial models, customer data, source code, patent applications, algorithmic architectures, and trade secrets.
+
+3. EXCLUSIONS FROM CONFIDENTIALITY
+Confidential Information does not include information that:
+(a) is or becomes generally available to the public without breach of this Agreement;
+(b) was already rightfully in Receiving Party's possession prior to disclosure without confidentiality restrictions;
+(c) is lawfully received from a third party without breach of any confidentiality obligation; or
+(d) is independently developed by Receiving Party without access to or reliance upon Disclosing Party's Confidential Information.
+
+4. OBLIGATIONS OF RECEIVING PARTY
+4.1 Standard of Care. Receiving Party shall protect Disclosing Party's Confidential Information with the same degree of care it uses for its own confidential information of like nature, but in no event less than reasonable care.
+4.2 Permitted Disclosures. Receiving Party may disclose Confidential Information only to its employees, directors, legal counsel, and financial advisors who need to know for the Purpose and who are bound by confidentiality obligations at least as restrictive as this Agreement.
+4.3 Non-Use. Receiving Party shall not use Confidential Information for any purpose other than evaluating and pursuing the Purpose.
+
+5. COMPELLED DISCLOSURE
+If Receiving Party is requested or required by law, court subpoena, or governmental authority to disclose any Confidential Information, Receiving Party shall provide prompt written notice to Disclosing Party to enable Disclosing Party to seek a protective order or contest the disclosure.
+
+6. RETURN OR DESTRUCTION OF MATERIALS
+Upon written request of Disclosing Party or termination of this Agreement, Receiving Party shall promptly return or destroy all documents, notes, and electronic copies containing Confidential Information, and certify compliance in writing within ten (10) business days.
+
+7. EQUITABLE RELIEF
+Receiving Party acknowledges that any unauthorized disclosure or use of Confidential Information will cause irreparable injury for which monetary damages alone would be inadequate. Accordingly, Disclosing Party shall be entitled to seek injunctive relief and specific performance in court without proving actual damages or posting bond.
+
+8. TERM AND SURVIVAL
+This Agreement shall govern disclosures made for one (1) year from the Effective Date. Receiving Party's confidentiality obligations shall survive for three (3) years following disclosure. Trade secrets shall be maintained in confidence perpetually.
+
+9. GOVERNING LAW
+This Agreement shall be governed by and construed in accordance with the laws of Pakistan, and the courts of Islamabad shall have exclusive jurisdiction over any disputes.
+
+IN WITNESS WHEREOF, the Parties have executed this Mutual Non-Disclosure Agreement.
+
+ALPHA FINTECH INNOVATIONS LTD                 DELTA CAPITAL VENTURES LLP
+By: ______________________________             By: ______________________________
+Name: Asim Zubair                              Name: Hamza Khalid
+Title: Managing Director                       Title: General Partner

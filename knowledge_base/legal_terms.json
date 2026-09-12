@@ -1,0 +1,942 @@
+[
+  {
+    "term": "Agreement",
+    "category": "Foundations",
+    "definition": "A mutual understanding or arrangement between two or more parties about their relative rights and duties.",
+    "simple_english": "A formal consensus or promise between people or companies.",
+    "simple_urdu": "دو یا دو سے زیادہ فریقین کے درمیان باہمی سمجھوتہ یا وعدہ۔",
+    "important_note": "An agreement is only legally enforceable in court if it meets all elements of a valid contract.",
+    "aliases": [
+      "Accord",
+      "Understanding",
+      "Pact"
+    ]
+  },
+  {
+    "term": "Contract",
+    "category": "Foundations",
+    "definition": "A legally binding agreement between two or more parties that creates mutual enforceable obligations.",
+    "simple_english": "A formal written or oral agreement that is backed and enforced by law.",
+    "simple_urdu": "ایک قانونی طور پر پابند معاہدہ جسے عدالت کے ذریعے نافذ کیا جا سکتا ہے۔",
+    "important_note": "Requires offer, acceptance, consideration, legal capacity, and lawful object.",
+    "aliases": [
+      "Legal Agreement",
+      "Binding Contract"
+    ]
+  },
+  {
+    "term": "Party",
+    "category": "Foundations",
+    "definition": "An individual, corporation, or entity that enters into a legal agreement and assumes rights or duties under it.",
+    "simple_english": "A person or company that signs and is bound by the contract.",
+    "simple_urdu": "وہ فرد، ادارہ یا کمپنی جو معاہدے پر دستخط کرتی ہے اور اس کی پابند ہوتی ہے۔",
+    "important_note": "Ensure the legal name and registration details of each party are exact.",
+    "aliases": [
+      "Signatory",
+      "Entity",
+      "Contracting Party"
+    ]
+  },
+  {
+    "term": "Consideration",
+    "category": "Foundations",
+    "definition": "Something of value exchanged between parties that forms the legal price or inducement for entering into a contract.",
+    "simple_english": "The payment, service, benefit, or promise each side provides to make the agreement legally binding.",
+    "simple_urdu": "معاہدے کا بدل یعنی وہ رقم، سروس یا فائدہ جو ہر فریق دوسرے کو فراہم کرتا ہے۔",
+    "important_note": "Without lawful consideration, a contract is generally void in common law jurisdictions.",
+    "aliases": [
+      "Quid pro quo",
+      "Value exchanged",
+      "Payment/Benefit"
+    ]
+  },
+  {
+    "term": "Obligation",
+    "category": "Duties & Performance",
+    "definition": "A legal duty or requirement imposed on a party by contract, statute, or law.",
+    "simple_english": "A task, payment, or rule you are legally required to fulfill under the contract.",
+    "simple_urdu": "قانونی ذمہ داری یا فرض جو کسی فریق پر معاہدے کے تحت عائد ہوتا ہے۔",
+    "important_note": "Check whether obligations are strict ('shall/must') or discretionary ('may').",
+    "aliases": [
+      "Duty",
+      "Requirement",
+      "Commitment"
+    ]
+  },
+  {
+    "term": "Right",
+    "category": "Duties & Performance",
+    "definition": "A legally protected entitlement or power granted to a party under an agreement or statute.",
+    "simple_english": "Something you are legally entitled to receive, do, or demand.",
+    "simple_urdu": "قانونی حق یا استحقاق جو معاہدے کے تحت کسی فریق کو حاصل ہوتا ہے۔",
+    "important_note": "Rights can be waived if not asserted in timely accordance with contract procedures.",
+    "aliases": [
+      "Entitlement",
+      "Privilege",
+      "Authority"
+    ]
+  },
+  {
+    "term": "Duty",
+    "category": "Duties & Performance",
+    "definition": "A mandatory action or standard of conduct that a party is obligated to perform by law or contract.",
+    "simple_english": "A mandatory responsibility that must be executed properly.",
+    "simple_urdu": "وہ لازمی فریضہ یا کارروائی جو کسی فریق کو معاہدے کے مطابق انجام دینی ہوتی ہے۔",
+    "important_note": "Breach of duty often gives rise to financial claims for damages.",
+    "aliases": [
+      "Responsibility",
+      "Legal Burden"
+    ]
+  },
+  {
+    "term": "Liability",
+    "category": "Risk & Financial",
+    "definition": "Legal responsibility for one's acts, omissions, debts, losses, or failure to perform contractual duties.",
+    "simple_english": "Being held legally and financially responsible for damages, debts, or mistakes.",
+    "simple_urdu": "قانونی یا مالی ذمہ داری (ہرجانے یا نقصان کا ازالہ کرنے کا بوجھ)۔",
+    "important_note": "Always examine limitation of liability clauses to determine financial exposure caps.",
+    "aliases": [
+      "Legal Responsibility",
+      "Financial Exposure"
+    ]
+  },
+  {
+    "term": "Indemnity",
+    "category": "Risk & Financial",
+    "definition": "A contractual commitment where one party promises to compensate or protect another party against specified future losses or claims.",
+    "simple_english": "A promise to pay for or reimburse the other party if they face lawsuits, fines, or losses.",
+    "simple_urdu": "ہرجانے یا نقصان کی تلافی کی ضمانت (ضمانتِ تلافی)۔",
+    "important_note": "Indemnities can be broad and expensive; verify whether legal defense costs are included.",
+    "aliases": [
+      "Hold Harmless",
+      "Indemnification",
+      "Reimbursement"
+    ]
+  },
+  {
+    "term": "Indemnification",
+    "category": "Risk & Financial",
+    "definition": "The act of compensating, defending, or shielding a party from loss, damage, or legal liability.",
+    "simple_english": "Repaying or shielding someone from losses incurred due to a breach or third-party claim.",
+    "simple_urdu": "کسی فریق کو مالی نقصان یا قانونی دعوے سے بچانے اور تلافی کرنے کا عمل۔",
+    "important_note": "Often paired with 'hold harmless' language; look for carve-outs for gross negligence.",
+    "aliases": [
+      "Indemnity defense",
+      "Protection against loss"
+    ]
+  },
+  {
+    "term": "Breach",
+    "category": "Default & Remedies",
+    "definition": "A failure, without legal excuse, to perform any promise or condition forming part of a contract.",
+    "simple_english": "Breaking a contract rule or failing to do what was promised.",
+    "simple_urdu": "معاہدے کی خلاف ورزی یا وعدہ خلافی۔",
+    "important_note": "Breaches can range from minor technical violations to material contract-ending defaults.",
+    "aliases": [
+      "Default",
+      "Violation",
+      "Non-performance"
+    ]
+  },
+  {
+    "term": "Material Breach",
+    "category": "Default & Remedies",
+    "definition": "A fundamental violation of contract terms that destroys the value of the agreement and excuses the non-breaching party from continuing.",
+    "simple_english": "A severe breach of a central term that justifies cancelling the contract and claiming damages.",
+    "simple_urdu": "معاہدے کی بنیادی اور سنگین خلاف ورزی جو معاہدہ ختم کرنے کی اجازت دیتی ہے۔",
+    "important_note": "Usually triggers immediate termination rights and full damages claims.",
+    "aliases": [
+      "Substantial Breach",
+      "Fundamental Breach"
+    ]
+  },
+  {
+    "term": "Default",
+    "category": "Default & Remedies",
+    "definition": "The failure to fulfill an obligation or pay a debt when due.",
+    "simple_english": "Failing to pay money on time or failing to perform an agreed task.",
+    "simple_urdu": "وقت پر رقم ادا نہ کرنا یا فرائض میں کوتاہی کرنا (نا دہندگی)۔",
+    "important_note": "Contracts often grant a 'cure period' (e.g. 15 days) to fix defaults before penalties apply.",
+    "aliases": [
+      "Failure to pay",
+      "Non-compliance"
+    ]
+  },
+  {
+    "term": "Damages",
+    "category": "Default & Remedies",
+    "definition": "Monetary compensation awarded or agreed upon for a loss or injury caused by a contract breach.",
+    "simple_english": "Money paid by the party that broke the contract to cover financial harm suffered by the other side.",
+    "simple_urdu": "خلاف ورزی سے ہونے والے نقصان کا مالی معاوضہ (ہرجانہ)۔",
+    "important_note": "May be compensatory, consequential, or liquidated as designated by the contract.",
+    "aliases": [
+      "Financial compensation",
+      "Monetary recovery"
+    ]
+  },
+  {
+    "term": "Compensation",
+    "category": "Risk & Financial",
+    "definition": "Payment, remuneration, or reimbursement provided in exchange for goods, services, or injury sustained.",
+    "simple_english": "Money given as payment for work done or as reimbursement for harm.",
+    "simple_urdu": "محنتانہ، اجرت یا نقصان کے بدلے دی جانے والی رقم۔",
+    "important_note": "Verify billing timelines and payment conditions attached to compensation.",
+    "aliases": [
+      "Remuneration",
+      "Reimbursement",
+      "Fee"
+    ]
+  },
+  {
+    "term": "Penalty",
+    "category": "Risk & Financial",
+    "definition": "A punitive sum stipulated for non-performance, often unenforceable in contract law if deemed excessive rather than compensatory.",
+    "simple_english": "A punishment fee charged for being late or violating an agreement rule.",
+    "simple_urdu": "سزا کے طور پر عائد کیا جانے والا جرمانہ۔",
+    "important_note": "Many courts refuse to enforce punitive clauses unless framed as genuine pre-estimated liquidated damages.",
+    "aliases": [
+      "Fine",
+      "Punitive fee"
+    ]
+  },
+  {
+    "term": "Termination",
+    "category": "Duration & End",
+    "definition": "The formal ending, cancellation, or conclusion of a contract prior to its natural expiration.",
+    "simple_english": "Ending the contract early, either for cause (breach) or for convenience.",
+    "simple_urdu": "معاہدے کا باضابطہ خاتمہ یا منسوخی۔",
+    "important_note": "Look for post-termination survival clauses regarding confidentiality and payment.",
+    "aliases": [
+      "Cancellation",
+      "Discharge",
+      "Conclusion"
+    ]
+  },
+  {
+    "term": "Rescission",
+    "category": "Duration & End",
+    "definition": "The unmaking or unwinding of a contract, restoring both parties to their pre-contract positions as if it never existed.",
+    "simple_english": "Cancelling a contract from the very beginning, usually due to fraud, misrepresentation, or mistake.",
+    "simple_urdu": "معاہدے کو ابتدا ہی سے کالعدم اور ختم قرار دینا (تنسیخ)۔",
+    "important_note": "Differs from termination because termination only ends future obligations.",
+    "aliases": [
+      "Unwinding",
+      "Annulment",
+      "Voiding"
+    ]
+  },
+  {
+    "term": "Renewal",
+    "category": "Duration & End",
+    "definition": "The continuation of a contract for a new term after the initial expiration period.",
+    "simple_english": "Extending the agreement for another cycle or duration.",
+    "simple_urdu": "معاہدے کی مدت ختم ہونے کے بعد اس کی تجدید یا اگلی مدت کا آغاز۔",
+    "important_note": "Beware of automatic renewal ('evergreen') clauses that require written advance notice to prevent.",
+    "aliases": [
+      "Extension",
+      "Continuance",
+      "Roll-over"
+    ]
+  },
+  {
+    "term": "Extension",
+    "category": "Duration & End",
+    "definition": "An agreed lengthening of the duration, deadline, or performance period of an existing contract.",
+    "simple_english": "Adding more time to the contract or to a project milestone.",
+    "simple_urdu": "معاہدے یا کام کی مقررہ مدت میں باہمی رضامندی سے اضافہ (توسیع)۔",
+    "important_note": "Extensions should always be documented in a signed written amendment.",
+    "aliases": [
+      "Prolongation",
+      "Deadline extension"
+    ]
+  },
+  {
+    "term": "Notice",
+    "category": "Formalities",
+    "definition": "A formal written communication required under contract terms to inform a party of an event, breach, or election.",
+    "simple_english": "An official written letter or email informing the other party of an action or notice.",
+    "simple_urdu": "باضابطہ تحریری اطلاع یا نوٹس۔",
+    "important_note": "Contracts often stipulate exact delivery methods (certified mail, specific email addresses).",
+    "aliases": [
+      "Formal communication",
+      "Notification"
+    ]
+  },
+  {
+    "term": "Notice Period",
+    "category": "Formalities",
+    "definition": "The designated interval of time that must elapse between delivering a formal notice and the effective date of the action.",
+    "simple_english": "The number of days in advance you must notify someone before an action (like termination) takes effect.",
+    "simple_urdu": "نوٹس کی مقررہ مہلت (مثلاً 30 دن پہلے مطلع کرنے کا دورانیہ)۔",
+    "important_note": "Failing to observe the notice period can make an attempted termination invalid.",
+    "aliases": [
+      "Advance notice",
+      "Waiting period"
+    ]
+  },
+  {
+    "term": "Confidentiality",
+    "category": "Intellectual Property & Privacy",
+    "definition": "A legal duty to keep non-public, proprietary, or trade secret information secret and secure.",
+    "simple_english": "Keeping private business information or trade secrets protected from disclosure.",
+    "simple_urdu": "معلومات کو صیغہ راز میں رکھنے کی قانونی ذمہ داری (رازداری)۔",
+    "important_note": "Standard exceptions include info already public, legally subpoenaed, or independently developed.",
+    "aliases": [
+      "Secrecy",
+      "Non-disclosure"
+    ]
+  },
+  {
+    "term": "Confidential Information",
+    "category": "Intellectual Property & Privacy",
+    "definition": "Specific data, business plans, technical designs, pricing, or customer details defined by the contract as private and protected.",
+    "simple_english": "The exact types of private data that you are forbidden from sharing with outsiders.",
+    "simple_urdu": "وہ نجی یا تجارتی معلومات جنہیں خفیہ رکھنا لازم ہے۔",
+    "important_note": "Check whether marking as 'Confidential' is required for the protection to apply.",
+    "aliases": [
+      "Proprietary Data",
+      "Trade Secrets"
+    ]
+  },
+  {
+    "term": "Arbitration",
+    "category": "Dispute Resolution",
+    "definition": "A private dispute resolution procedure where a neutral arbitrator issues a binding decision instead of going to public court.",
+    "simple_english": "Resolving a legal disagreement outside of court before an appointed neutral judge (arbitrator).",
+    "simple_urdu": "عدالت جانے کے بجائے باہمی ثالث (ثالثی) کے ذریعے تنازعے کا حتمی فیصلہ کروانا۔",
+    "important_note": "Arbitration awards are generally binding and very difficult to appeal.",
+    "aliases": [
+      "Binding Arbitration",
+      "Alternative Dispute Resolution (ADR)"
+    ]
+  },
+  {
+    "term": "Mediation",
+    "category": "Dispute Resolution",
+    "definition": "A non-binding dispute negotiation process facilitated by an impartial third-party mediator to achieve a settlement.",
+    "simple_english": "A meeting with a neutral mediator who helps both sides negotiate a voluntary compromise.",
+    "simple_urdu": "غیر جانبدار ثالث کے ذریعے باہمی صلح اور سمجھوتے کی کوشش (مفاہمت)۔",
+    "important_note": "Mediation does not impose a decision unless both parties sign a settlement agreement.",
+    "aliases": [
+      "Facilitated Settlement",
+      "Conciliation"
+    ]
+  },
+  {
+    "term": "Dispute Resolution",
+    "category": "Dispute Resolution",
+    "definition": "The formal procedure established by contract to settle conflicts, claims, or disagreements.",
+    "simple_english": "The step-by-step method (talks, mediation, arbitration, or court) to solve disagreements.",
+    "simple_urdu": "تنازعات اور جھگڑوں کے حل کا طے شدہ طریقہ کار۔",
+    "important_note": "Often requires informal negotiation before allowing court action.",
+    "aliases": [
+      "Conflict resolution",
+      "Litigation procedure"
+    ]
+  },
+  {
+    "term": "Jurisdiction",
+    "category": "Governing Law",
+    "definition": "The legal authority of a particular geographic court system to hear and decide a lawsuit.",
+    "simple_english": "Which specific court or city has the official power to handle legal disputes between the parties.",
+    "simple_urdu": "وہ مخصوص عدالت یا علاقہ جس کو قانونی کارروائی اور فیصلے کا اختیار حاصل ہے (دائرہ اختیار)۔",
+    "important_note": "Exclusive jurisdiction clauses prevent you from filing lawsuits in other locations.",
+    "aliases": [
+      "Forum",
+      "Court Authority",
+      "Venue"
+    ]
+  },
+  {
+    "term": "Governing Law",
+    "category": "Governing Law",
+    "definition": "The designated body of substantive laws that will be applied to interpret and enforce the contract.",
+    "simple_english": "Which country or state's laws will be used to read and judge the contract.",
+    "simple_urdu": "وہ قانون یا ملک کا نظام جس کے تحت معاہدے کی تشریح کی جائے گی (حکمران قانون)۔",
+    "important_note": "Governing law can be different from the physical jurisdiction where the parties reside.",
+    "aliases": [
+      "Choice of Law",
+      "Applicable Law"
+    ]
+  },
+  {
+    "term": "Force Majeure",
+    "category": "Risk & Financial",
+    "definition": "Unforeseeable external circumstances (e.g. war, natural disaster, pandemics) preventing a party from fulfilling an agreement.",
+    "simple_english": "Extreme events outside human control (acts of God, wars) that temporarily excuse contractual delays.",
+    "simple_urdu": "ایسے غیر متوقع اور ہنگامی حالات (جیسے قدرتی آفات یا جنگ) جو انسان کے بس سے باہر ہوں۔",
+    "important_note": "Financial hardship or inflation does not typically qualify as force majeure.",
+    "aliases": [
+      "Act of God",
+      "Unavoidable Accident",
+      "Impossibility"
+    ]
+  },
+  {
+    "term": "Waiver",
+    "category": "Boilerplate",
+    "definition": "The voluntary relinquishment or surrender of a known legal right, claim, or privilege.",
+    "simple_english": "Giving up a contractual right, either intentionally or by failing to enforce it.",
+    "simple_urdu": "اپنے کسی قانونی حق یا دعوے سے رضاکارانہ طور پر دستبردار ہونا۔",
+    "important_note": "Contracts routinely include 'No Waiver' clauses stating that letting one breach slide does not waive future breaches.",
+    "aliases": [
+      "Relinquishment",
+      "Forfeiture of right"
+    ]
+  },
+  {
+    "term": "Amendment",
+    "category": "Boilerplate",
+    "definition": "A formal modification, addition, or deletion made to the terms of an existing signed contract.",
+    "simple_english": "An official written change or update added to the contract.",
+    "simple_urdu": "معاہدے کی شرائط میں باہمی رضامندی سے باضابطہ تبدیلی یا ترمیم۔",
+    "important_note": "Most commercial agreements mandate that amendments must be written and signed by all parties.",
+    "aliases": [
+      "Modification",
+      "Variation",
+      "Addendum"
+    ]
+  },
+  {
+    "term": "Assignment",
+    "category": "Boilerplate",
+    "definition": "The transfer of contractual rights, interests, or duties from one party to another third party.",
+    "simple_english": "Handing over your rights or contracts to another person or business.",
+    "simple_urdu": "معاہدے کے حقوق یا فرائض کسی تیسرے فریق کو منتقل کرنا۔",
+    "important_note": "Contracts frequently prohibit assignment without the prior written consent of the other party.",
+    "aliases": [
+      "Transfer",
+      "Conveyance",
+      "Novation"
+    ]
+  },
+  {
+    "term": "Severability",
+    "category": "Boilerplate",
+    "definition": "A provision ensuring that if one clause is found illegal or unenforceable, the rest of the contract remains valid and binding.",
+    "simple_english": "A rule stating that if one part of the contract is struck down by a judge, the rest continues to work.",
+    "simple_urdu": "اگر معاہدے کی کوئی ایک شق کالعدم ہو جائے تو باقی معاہدہ برقرار رہنے کا اصول۔",
+    "important_note": "Protects the entire deal from collapsing due to a single flawed clause.",
+    "aliases": [
+      "Separability",
+      "Partial invalidity"
+    ]
+  },
+  {
+    "term": "Entire Agreement",
+    "category": "Boilerplate",
+    "definition": "A clause stating that the written agreement represents the complete, final agreement, superseding all prior oral or written talks.",
+    "simple_english": "A clause confirming that only what is written in this document counts; past discussions or emails are void.",
+    "simple_urdu": "یہ شق کہ صرف یہ تحریر ہی حتمی معاہدہ ہے اور پچھلی تمام زبانی یا تحریری باتیں منسوخ ہیں۔",
+    "important_note": "Prevents parties from arguing that earlier verbal promises are part of the deal (integration clause).",
+    "aliases": [
+      "Integration Clause",
+      "Merger Clause",
+      "Four Corners"
+    ]
+  },
+  {
+    "term": "Limitation of Liability",
+    "category": "Risk & Financial",
+    "definition": "A contractual cap on the amount or types of damages one party can recover from another in case of breach.",
+    "simple_english": "A maximum ceiling on how much money one side has to pay if something goes wrong.",
+    "simple_urdu": "ہرجانے یا نقصان کے معاوضے کی رقم پر ایک حد مقرر کرنا (ذمہ داری کی حد بندی)۔",
+    "important_note": "Often excludes indirect or consequential damages and caps liability to fees paid.",
+    "aliases": [
+      "Liability Cap",
+      "Exclusion of damages"
+    ]
+  },
+  {
+    "term": "Warranty",
+    "category": "Duties & Performance",
+    "definition": "A legally binding promise or assurance that a fact, product, or service meets specific standards of quality or performance.",
+    "simple_english": "A formal guarantee about the quality, condition, or functionality of goods or services.",
+    "simple_urdu": "معیار یا کارکردگی کی قانونی ضمانت (وارنٹی)۔",
+    "important_note": "Disclaimers ('as is') attempt to eliminate implied warranties.",
+    "aliases": [
+      "Guarantee",
+      "Assurance",
+      "Covenant"
+    ]
+  },
+  {
+    "term": "Representation",
+    "category": "Duties & Performance",
+    "definition": "A statement of past or present fact made by one party to induce another party to enter into a contract.",
+    "simple_english": "A formal factual declaration made during contract signing (e.g. 'we own this software').",
+    "simple_urdu": "معاہدے کے وقت کیا گیا باضابطہ بیانِ واقعہ کہ یہ بات سچ ہے۔",
+    "important_note": "False representations can lead to claims of fraudulent misrepresentation and rescission.",
+    "aliases": [
+      "Factual statement",
+      "Declaration"
+    ]
+  },
+  {
+    "term": "Intellectual Property",
+    "category": "Intellectual Property & Privacy",
+    "definition": "Creations of the mind protected by law, such as inventions, literary/artistic works, code, trademarks, and trade secrets.",
+    "simple_english": "Ownership over creative works, technology, code, designs, and brand names.",
+    "simple_urdu": "دانشورانہ ملکیت (جیسے سافٹ ویئر، کوڈ، ایجادات، ڈیزائن اور برانڈ کے حقوق)۔",
+    "important_note": "Contracts should explicitly specify whether IP is licensed or permanently assigned ('work made for hire').",
+    "aliases": [
+      "IP",
+      "Proprietary Rights"
+    ]
+  },
+  {
+    "term": "Copyright",
+    "category": "Intellectual Property & Privacy",
+    "definition": "An exclusive legal right granting the creator of an original work the sole power to publish, copy, or distribute it.",
+    "simple_english": "The legal right preventing others from copying your original writing, code, music, or art.",
+    "simple_urdu": "کسی تحریر، کوڈ یا فنی کام کو نقل کرنے یا شائع کرنے کا خصوصی حق (حق اشاعت)۔",
+    "important_note": "Protects expression of ideas, not the underlying ideas themselves.",
+    "aliases": [
+      "Author's right",
+      "Reproduction right"
+    ]
+  },
+  {
+    "term": "Trademark",
+    "category": "Intellectual Property & Privacy",
+    "definition": "A distinctive sign, design, word, or symbol that identifies goods or services of a particular source.",
+    "simple_english": "A brand name, logo, or slogan that identifies a company's products.",
+    "simple_urdu": "تجارتی نشان یا علامت جو کسی کمپنی کے مال یا خدمات کی شناخت ہو۔",
+    "important_note": "Unauthorized commercial use creates trademark infringement liability.",
+    "aliases": [
+      "Brand mark",
+      "Logo",
+      "Service mark"
+    ]
+  },
+  {
+    "term": "License",
+    "category": "Intellectual Property & Privacy",
+    "definition": "A contractual grant of permission to use intellectual property or property without transferring outright ownership.",
+    "simple_english": "Permission to use someone's software, brand, or content without actually buying the ownership.",
+    "simple_urdu": "کسی چیز یا سافٹ ویئر کو استعمال کرنے کا باضابطہ اجازت نامہ (لائسنس)۔",
+    "important_note": "Look at whether a license is exclusive, non-exclusive, revocable, or royalty-bearing.",
+    "aliases": [
+      "Permit",
+      "Grant of rights",
+      "Usage authorization"
+    ]
+  },
+  {
+    "term": "Data Protection",
+    "category": "Intellectual Property & Privacy",
+    "definition": "Legal compliance frameworks and standards governing the processing, storage, and transfer of personal data.",
+    "simple_english": "Rules ensuring personal customer and employee information is stored safely and not leaked.",
+    "simple_urdu": "صارفین اور افراد کے ذاتی ڈیٹا کی حفاظت کے قانونی ضوابط۔",
+    "important_note": "Contracts often incorporate explicit Data Processing Addendums (DPAs).",
+    "aliases": [
+      "Data Security",
+      "Information Security"
+    ]
+  },
+  {
+    "term": "Privacy",
+    "category": "Intellectual Property & Privacy",
+    "definition": "The right of individuals to control how their personal information is collected, used, and shared.",
+    "simple_english": "Respecting and protecting individuals' personal identity and private communications.",
+    "simple_urdu": "ذاتی معلومات اور نجی معاملات کی رازداری کا تحفظ۔",
+    "important_note": "Violations can trigger statutory regulatory fines and civil liability.",
+    "aliases": [
+      "Personal privacy",
+      "Confidentiality of data"
+    ]
+  },
+  {
+    "term": "Non-Compete",
+    "category": "Restrictive Covenants",
+    "definition": "A restrictive clause prohibiting a party or former employee from entering into similar commercial competition for a set period.",
+    "simple_english": "A restriction preventing you from starting a competing business or working for a direct rival.",
+    "simple_urdu": "ملازمت یا معاہدے کے بعد اسی شعبے میں حریف کے ساتھ کام نہ کرنے کی پابندی۔",
+    "important_note": "Courts often scrutinize non-competes; unreasonable geographic or time limits may be voided.",
+    "aliases": [
+      "Covenant not to compete",
+      "Restraint of trade"
+    ]
+  },
+  {
+    "term": "Non-Solicitation",
+    "category": "Restrictive Covenants",
+    "definition": "An agreement not to poach, solicit, or entice away clients, customers, or employees from the other party.",
+    "simple_english": "A promise not to steal the company's customers or persuade their employees to leave.",
+    "simple_urdu": "کمپنی کے گاہکوں یا ملازمین کو توڑ کر اپنی طرف نہ بلانے کا معاہدہ۔",
+    "important_note": "Typically more enforceable than general non-competes because it protects legitimate client relationships.",
+    "aliases": [
+      "Anti-poaching",
+      "Client protection clause"
+    ]
+  },
+  {
+    "term": "Payment Terms",
+    "category": "Financial",
+    "definition": "The contractual schedule, invoicing dates, accepted methods, and due dates for financial compensation.",
+    "simple_english": "When, how, and by what date money must be transferred or paid.",
+    "simple_urdu": "ادائیگی کا شیڈول، طریقہ کار اور مقررہ تاریخیں۔",
+    "important_note": "Common terms include Net 30, Net 15, or upfront milestone payments.",
+    "aliases": [
+      "Invoicing Schedule",
+      "Remittance Terms"
+    ]
+  },
+  {
+    "term": "Late Payment",
+    "category": "Financial",
+    "definition": "A failure to deliver payment by the contractually specified deadline, often triggering interest or suspension of services.",
+    "simple_english": "Paying after the due date, which can result in late interest fees or work stoppage.",
+    "simple_urdu": "مقررہ تاریخ کے بعد تاخیر سے ادائیگی کرنا، جس پر اضافی فیس عائد ہو سکتی ہے۔",
+    "important_note": "Check whether late interest percentages are calculated per month or per annum.",
+    "aliases": [
+      "Overdue payment",
+      "Payment arrears"
+    ]
+  },
+  {
+    "term": "Deliverables",
+    "category": "Duties & Performance",
+    "definition": "The tangible or intangible outputs, reports, software, or goods required to be delivered under the contract.",
+    "simple_english": "The finished items, files, or services that a service provider must hand over.",
+    "simple_urdu": "وہ اشیاء، سافٹ ویئر یا رپورٹس جو معاہدے کے تحت مکمل کر کے فراہم کرنا لازم ہوں۔",
+    "important_note": "Always ensure acceptance criteria for deliverables are objectively measurable.",
+    "aliases": [
+      "Outputs",
+      "Work products",
+      "Milestones"
+    ]
+  },
+  {
+    "term": "Liquidated Damages",
+    "category": "Remedies & Damages",
+    "definition": "A predetermined, fixed sum agreed upon in the contract that one party will pay as compensation to the other upon a specific breach.",
+    "simple_english": "A pre-agreed financial penalty or compensation amount if a specific promise or deadline is broken.",
+    "simple_urdu": "پہلے سے طے شدہ ہرجانے کی رقم جو معاہدے کی خلاف ورزی کی صورت میں فریقِ ثانی کو ادا کی جائے گی۔",
+    "important_note": "Courts will only enforce liquidated damages if they represent a genuine pre-estimate of loss, not an arbitrary punitive penalty.",
+    "aliases": [
+      "Agreed Damages",
+      "Pre-estimated Damages",
+      "Stipulated Damages"
+    ]
+  },
+  {
+    "term": "Specific Performance",
+    "category": "Remedies & Damages",
+    "definition": "An equitable court order compelling a defaulting party to carry out the exact contractual obligations they promised, rather than merely paying money damages.",
+    "simple_english": "A court ruling forcing someone to actually fulfill their promise (e.g. deliver unique real estate or rare goods).",
+    "simple_urdu": "عدالتی حکم جس کے تحت کسی فریق کو معاہدے کے عین مطابق اپنے وعدے کو عملی طور پر پورا کرنے کا پابند کیا جاتا ہے۔",
+    "important_note": "Granted primarily when monetary damages are inadequate to compensate for the breach (e.g. sale of unique land).",
+    "aliases": [
+      "Equitable Enforcement",
+      "Court Order for Performance"
+    ]
+  },
+  {
+    "term": "Promissory Estoppel",
+    "category": "Foundations",
+    "definition": "A legal doctrine that prevents a party from going back on a promise when the other party reasonably relied upon that promise to their financial or practical detriment.",
+    "simple_english": "A rule stopping someone from breaking their word if the other person took action and suffered a loss based on that promise.",
+    "simple_urdu": "قانونی اصول جو کسی فریق کو اپنے وعدے سے مکرنے سے روکتا ہے اگر دوسرے فریق نے اس پر بھروسہ کر کے نقصان اٹھایا ہو۔",
+    "important_note": "Can enforce a promise even in the absence of a formal consideration exchange under equitable justice.",
+    "aliases": [
+      "Estoppel",
+      "Detrimental Reliance"
+    ]
+  },
+  {
+    "term": "Injunction",
+    "category": "Remedies & Damages",
+    "definition": "A judicial order commanding a party to refrain from doing a specified act (prohibitory injunction) or to perform a mandatory corrective act (mandatory injunction).",
+    "simple_english": "A court stay order forcing a party to halt an action immediately or do a mandatory fix.",
+    "simple_urdu": "عدالتی حکمِ امتناعی (اسٹے آرڈر) جو کسی مخصوص کام کو روکنے یا فوری نافذ کرنے کے لیے دیا جاتا ہے۔",
+    "important_note": "Frequently sought in IP infringement, trade secret disclosure, or breach of non-disclosure agreements.",
+    "aliases": [
+      "Restraining Order",
+      "Stay Order",
+      "Interlocutory Injunction"
+    ]
+  },
+  {
+    "term": "Caveat Emptor",
+    "category": "Commercial Principles",
+    "definition": "A common law commercial maxim meaning 'let the buyer beware,' placing the duty of inspection on the purchaser before finalizing a deal.",
+    "simple_english": "The buyer assumes the risk and responsibility to examine the goods or property before buying.",
+    "simple_urdu": "خریدار کی ہوشیاری کا اصول، یعنی خریداری سے قبل چیز کا خود جائزہ لینا خریدار کی ذمہ داری ہے۔",
+    "important_note": "Modern consumer protection statutes have introduced significant statutory warranties that mitigate this traditional doctrine.",
+    "aliases": [
+      "Buyer Beware",
+      "Purchaser Due Diligence"
+    ]
+  },
+  {
+    "term": "Subrogation",
+    "category": "Risk Allocation & Insurance",
+    "definition": "The legal substitution of one person or insurer in place of another with respect to a lawful claim, demand, or right against a third party.",
+    "simple_english": "When an insurer pays your claim and inherits your right to sue the person who caused the damage.",
+    "simple_urdu": "ایک فریق (جیسے انشورنس کمپنی) کا دوسرے فریق کی جگہ قانونی حقوق حاصل کرنا تاکہ نقصان پہنچانے والے سے ریکوری کی جا سکے۔",
+    "important_note": "Commercial leases frequently include a 'waiver of subrogation' to prevent insurers from suing tenants after settling property damage.",
+    "aliases": [
+      "Right of Subrogation",
+      "Legal Substitution"
+    ]
+  },
+  {
+    "term": "Novation",
+    "category": "Contract Lifecycle",
+    "definition": "The legal substitution of a new contract or party in place of an existing one, completely releasing the original obligor from liability with the consent of all parties.",
+    "simple_english": "Replacing an old contract or partner with a new one, completely freeing the original party from duties.",
+    "simple_urdu": "پرانے معاہدے یا فریق کی جگہ نئے معاہدے یا فریق کا قانونی نعم البدل جس سے پرانا فریق بری الذمہ ہو جاتا ہے۔",
+    "important_note": "Requires the explicit mutual consent of all contracting parties, unlike a unilateral assignment of rights.",
+    "aliases": [
+      "Contract Substitution",
+      "Replacement Agreement"
+    ]
+  },
+  {
+    "term": "Privity of Contract",
+    "category": "Foundations",
+    "definition": "The legal doctrine establishing that a contract cannot confer rights or impose obligations on any person who is not an actual party to it.",
+    "simple_english": "Only people or companies that actually signed the contract can sue or be sued on its terms.",
+    "simple_urdu": "معاہداتی استحقاق کا اصول، جس کے مطابق صرف معاہدے کے فریقین ہی ایک دوسرے کے خلاف دعویٰ دائر کر سکتے ہیں۔",
+    "important_note": "Third-party beneficiary clauses explicitly carve out exceptions to this strict traditional rule.",
+    "aliases": [
+      "Privity Doctrine",
+      "Contractual Relationship"
+    ]
+  },
+  {
+    "term": "Ultra Vires",
+    "category": "Corporate & Authority",
+    "definition": "A Latin phrase meaning 'beyond the powers,' describing actions taken by a corporation or official that exceed the scope of their legal or constitutional authority.",
+    "simple_english": "Acts done without legal authority or exceeding the allowed powers granted by corporate charter or statute.",
+    "simple_urdu": "اختیار سے تجاوز، یعنی ایسا اقدام جو کمپنی کے میمورنڈم یا قانونی دائرہ اختیار سے باہر ہو۔",
+    "important_note": "Contracts entered ultra vires may be void or unenforceable against the corporate entity.",
+    "aliases": [
+      "Beyond Legal Power",
+      "Lack of Authority"
+    ]
+  },
+  {
+    "term": "Quantum Meruit",
+    "category": "Remedies & Damages",
+    "definition": "A legal principle meaning 'as much as he has deserved,' awarding reasonable compensation for work or services rendered where no fixed price was finalized or contract was terminated early.",
+    "simple_english": "Receiving fair market payment for the actual value of work completed, even without a finished contract.",
+    "simple_urdu": "انجام دیے گئے کام کی مناسب اور منصفانہ اجرت کا استحقاق۔",
+    "important_note": "Frequently invoked in construction and professional consultancy when contracts are aborted mid-stream.",
+    "aliases": [
+      "Reasonable Value of Services",
+      "Unjust Enrichment Remedy"
+    ]
+  },
+  {
+    "term": "Covenant",
+    "category": "Duties & Performance",
+    "definition": "A formal, solemn, and legally binding promise or commitment in a contract to do (affirmative covenant) or refrain from doing (negative covenant) a specified act.",
+    "simple_english": "A strict contractual promise to take action or avoid doing something.",
+    "simple_urdu": "باقاعدہ اور سنجیدہ قانونی عہد یا وعدہ جس کی پابندی لازمی ہو۔",
+    "important_note": "Breach of covenant can trigger termination rights and direct indemnity obligations.",
+    "aliases": [
+      "Binding Promise",
+      "Contractual Undertaking"
+    ]
+  },
+  {
+    "term": "Lien",
+    "category": "Security & Debt",
+    "definition": "A legal right or claim that a creditor holds against another's property as security for a debt or performance of an obligation until satisfied.",
+    "simple_english": "A legal hold on property or assets until an outstanding debt or service charge is fully paid.",
+    "simple_urdu": "حقِ حبس، یعنی بقایا رقم کی وصولی تک کسی کے مال یا جائیداد کو اپنے قبضے میں رکھنے کا قانونی حق۔",
+    "important_note": "Mechanics' liens or commercial possessory liens can block the sale or transfer of real property until discharged.",
+    "aliases": [
+      "Security Interest",
+      "Encumbrance",
+      "Possessory Lien"
+    ]
+  },
+  {
+    "term": "Joint and Several Liability",
+    "category": "Risk Allocation & Insurance",
+    "definition": "A liability structure where two or more parties are collectively and individually responsible for the entire obligation or damage, allowing the claimant to recover 100% from any single party.",
+    "simple_english": "When multiple co-signers are each fully responsible for the entire debt, so the creditor can sue one person for all the money.",
+    "simple_urdu": "مشترکہ اور انفرادی ذمہ داری، جس کے تحت مدعی پوری رقم کسی ایک یا تمام فریقین سے وصول کر سکتا ہے۔",
+    "important_note": "Signatories should seek 'several (proportional) liability' instead to prevent carrying the full burden of co-parties' defaults.",
+    "aliases": [
+      "Joint Liability",
+      "Solidary Obligation"
+    ]
+  },
+  {
+    "term": "Fiduciary Duty",
+    "category": "Corporate & Authority",
+    "definition": "The highest ethical and legal standard of care and utmost loyalty owed by one party (fiduciary) to another (beneficiary), such as directors to shareholders or agents to principals.",
+    "simple_english": "A duty to act completely honestly and in the sole best financial and legal interest of the other party.",
+    "simple_urdu": "امانت داری اور دیانت کا اعلیٰ ترین قانونی فرض جس میں فریقِ مخالف کے مفادات کو ترجیح دی جاتی ہے۔",
+    "important_note": "Breaching fiduciary duty exposes individuals to personal liability and disgorgement of all illicit profits.",
+    "aliases": [
+      "Duty of Loyalty",
+      "Duty of Care",
+      "Trust Obligation"
+    ]
+  },
+  {
+    "term": "Parol Evidence Rule",
+    "category": "Contract Interpretation",
+    "definition": "A common law rule preventing parties from introducing prior oral or written agreements to contradict, alter, or add to the terms of a finalized, integrated written contract.",
+    "simple_english": "Oral promises made before signing don't count if they aren't written into the final signed agreement.",
+    "simple_urdu": "زبانی شہادت کی ممانعت کا اصول، یعنی تحریری معاہدے کے خلاف پہلے کی زبانی باتوں کی سنوائی نہیں ہوتی۔",
+    "important_note": "Reinforced by 'Entire Agreement' / 'Merger' clauses to prevent disputes over preliminary negotiations.",
+    "aliases": [
+      "Extrinsic Evidence Rule",
+      "Four Corners Doctrine"
+    ]
+  },
+  {
+    "term": "Bona Fide",
+    "category": "Foundations",
+    "definition": "A Latin term meaning 'in good faith'; acting honestly, openly, and without fraud, deceit, or malicious intention to gain an unfair advantage.",
+    "simple_english": "Acting honestly and in genuine good faith without hidden deceit.",
+    "simple_urdu": "نیک نیتی کے ساتھ، بغیر کسی فریب یا دھوکہ دہی کے عمل کرنا۔",
+    "important_note": "Courts imply an underlying covenant of good faith and fair dealing in most contractual interactions.",
+    "aliases": [
+      "Good Faith",
+      "Genuine",
+      "Honest Dealing"
+    ]
+  },
+  {
+    "term": "Mala Fide",
+    "category": "Foundations",
+    "definition": "A Latin term meaning 'in bad faith'; actions undertaken with fraudulent, dishonest, or malicious intent to deceive or harm another party.",
+    "simple_english": "Acting dishonestly, deceitfully, or with deliberate bad intent.",
+    "simple_urdu": "بدنیتی کے ساتھ، ارادتاً نقصان پہنچانے یا دھوکہ دینے کی نیت۔",
+    "important_note": "Actions taken mala fide invalidate discretionary contractual approvals and expose parties to punitive damages.",
+    "aliases": [
+      "Bad Faith",
+      "Deceitful Conduct",
+      "Fraudulent Intent"
+    ]
+  },
+  {
+    "term": "Inter Alia",
+    "category": "Contract Interpretation",
+    "definition": "A Latin phrase meaning 'among other things,' used in legal drafting to cite examples without creating an exhaustive or restrictive list.",
+    "simple_english": "'Among other things' - indicating that the items mentioned are only examples, not the complete list.",
+    "simple_urdu": "دیگر باتوں کے علاوہ؛ یہ ظاہر کرنے کے لیے کہ دی گئی مثالیں صرف نمونہ ہیں، مکمل فہرست نہیں۔",
+    "important_note": "Prevents the restrictive application of the ejusdem generis rule by leaving provisions open-ended.",
+    "aliases": [
+      "Among Others",
+      "Including Without Limitation"
+    ]
+  },
+  {
+    "term": "Pro Rata",
+    "category": "Financial",
+    "definition": "A Latin term meaning 'in proportion'; calculating a financial share, expense, or distribution according to each party's respective mathematical percentage or fraction.",
+    "simple_english": "Divided proportionally based on each person's exact share or portion.",
+    "simple_urdu": "تناسب کے لحاظ سے، یعنی ہر فریق کے مخصوص فیصد کے مطابق تقسیم۔",
+    "important_note": "Often seen in rent adjustments, insurance refunds, dividend distributions, and tax apportionments.",
+    "aliases": [
+      "Proportionately",
+      "Prorated",
+      "Fractional Share"
+    ]
+  },
+  {
+    "term": "Ipso Facto",
+    "category": "Contract Lifecycle",
+    "definition": "A Latin phrase meaning 'by that very fact or act'; an effect that occurs automatically as a direct consequence of an event without requiring additional steps.",
+    "simple_english": "Happening automatically by the very nature of the event itself.",
+    "simple_urdu": "از خود، یعنی کسی واقعے کے رونما ہوتے ہی بغیر کسی دوسرے عمل کے خود بخود لاگو ہونا۔",
+    "important_note": "Ipso facto bankruptcy termination clauses are often restricted or stayed by statutory insolvency laws.",
+    "aliases": [
+      "Automatically",
+      "By the Fact Itself"
+    ]
+  },
+  {
+    "term": "De Minimis",
+    "category": "Contract Interpretation",
+    "definition": "Derived from 'de minimis non curat lex' (the law does not concern itself with trifles); referring to matters too minor, trivial, or insignificant to warrant legal remedy.",
+    "simple_english": "Too small, minor, or trivial to be worth taking to court.",
+    "simple_urdu": "معمولی یا جزوی نوعیت کی چیز جس پر قانون عام طور پر توجہ نہیں دیتا۔",
+    "important_note": "Contracts often set a minimum financial basket (e.g. $5,000) before indemnification claims can be launched.",
+    "aliases": [
+      "Trivial Matter",
+      "Insignificant Variation"
+    ]
+  },
+  {
+    "term": "Mutatis Mutandis",
+    "category": "Contract Interpretation",
+    "definition": "A Latin drafting term meaning 'with the necessary changes having been made,' applying existing rules or clauses to a new context with relevant factual adaptations.",
+    "simple_english": "Applying the same rules with the necessary minor details changed to fit the new situation.",
+    "simple_urdu": "ضروری ترامیم کے ساتھ، یعنی پرانے اصولوں کو نئی صورتحال پر ضروری ردوبدل کر کے لاگو کرنا۔",
+    "important_note": "Saves repetitive drafting when extending schedules, appendices, or subsequent work orders.",
+    "aliases": [
+      "With Necessary Adaptations",
+      "Correspondingly"
+    ]
+  },
+  {
+    "term": "Sine Qua Non",
+    "category": "Foundations",
+    "definition": "An indispensable and essential condition, element, or prerequisite without which a contract, transaction, or outcome cannot exist.",
+    "simple_english": "An absolute must-have condition without which the entire deal cannot move forward.",
+    "simple_urdu": "لازمی اور ناگزیر شرط جس کے بغیر کوئی معاملہ یا معاہدہ قائم نہیں ہو سکتا۔",
+    "important_note": "In breach and negligence, the 'but-for' test determines if an action was the sine qua non of the loss.",
+    "aliases": [
+      "Indispensable Condition",
+      "Absolute Prerequisite"
+    ]
+  },
+  {
+    "term": "Clean Hands Doctrine",
+    "category": "Foundations",
+    "definition": "An equitable legal maxim stating that a party who seeks equitable relief or remedies from the court must not have acted unethically, deceitfully, or unlawfully in the same matter.",
+    "simple_english": "You cannot ask the court for fairness if you behaved unfairly or dishonestly in the transaction.",
+    "simple_urdu": "صاف ہاتھوں کا اصول، یعنی عدالتی ریلیف مانگنے والے کو خود بے داغ اور دیانت دار ہونا چاہیے۔",
+    "important_note": "A defendant can defeat an injunction claim by proving the claimant also acted unfairly.",
+    "aliases": [
+      "Doctrine of Clean Hands",
+      "Equitable Integrity"
+    ]
+  },
+  {
+    "term": "Indemnitor & Indemnitee",
+    "category": "Risk Allocation & Insurance",
+    "definition": "The 'Indemnitor' is the party who promises to protect, defend, and pay damages; the 'Indemnitee' is the party receiving this protection against third-party claims.",
+    "simple_english": "Indemnitor = the payer/shield; Indemnitee = the protected party receiving reimbursement.",
+    "simple_urdu": "ضامن (نقصان کا ازالہ کرنے والا) اور مضموم لہ (جس کے نقصان کا تحفظ کیا جا رہا ہو)۔",
+    "important_note": "Check which party carries the indemnitor role and whether defense costs (attorneys' fees) are included.",
+    "aliases": [
+      "Shielding Party & Protected Party",
+      "Indemnifying Party"
+    ]
+  },
+  {
+    "term": "Power of Attorney",
+    "category": "Corporate & Authority",
+    "definition": "A formal written legal deed by which a person (principal) appoints another (agent or attorney-in-fact) to manage their property, finances, or legal affairs.",
+    "simple_english": "A legal document giving someone the formal power to sign documents and make decisions on your behalf.",
+    "simple_urdu": "مختار نامہ، یعنی قانونی دستاویز جس کے ذریعے کوئی شخص اپنے معاملات کسی دوسرے کے سپرد کرتا ہے۔",
+    "important_note": "A General Power of Attorney grants broad discretion; a Special Power of Attorney strictly limits acts to specific property or courts.",
+    "aliases": [
+      "Mukhtar Nama",
+      "Letter of Attorney",
+      "Mandate"
+    ]
+  },
+  {
+    "term": "Equitable Relief",
+    "category": "Remedies & Damages",
+    "definition": "Non-monetary court remedies (such as injunctions, specific performance, or rescission) awarded when financial compensation is insufficient to right the wrong.",
+    "simple_english": "Court remedies that order someone to do or stop something, rather than just handing over cash.",
+    "simple_urdu": "منصفانہ عدالتی ریلیف، جو محض مالی معاوضے کے بجائے کسی عمل کو روکنے یا نافذ کرنے پر مبنی ہو۔",
+    "important_note": "Confidentiality agreements routinely state that breach causes irreparable harm entitling the owner to equitable relief.",
+    "aliases": [
+      "Equitable Remedy",
+      "Non-monetary Relief"
+    ]
+  }
+]
