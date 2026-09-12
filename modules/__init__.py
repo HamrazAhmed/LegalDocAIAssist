@@ -1,0 +1,1 @@
+"""LegalDocAiAssist modular package initialization."""

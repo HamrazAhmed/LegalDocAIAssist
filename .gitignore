@@ -1,0 +1,161 @@
+# ==============================================================================
+# LegalDocAiAssist - Comprehensive Git Ignore Rules
+# ==============================================================================
+# Strict confidentiality rules: NEVER commit real API keys, credentials,
+# uploaded legal documents, vector indexes, or runtime caches to GitHub.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environments, Credentials & Secrets (CRITICAL)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+secrets.toml
+credentials.json
+client_secret*.json
+service_account*.json
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.keystore
+
+# ------------------------------------------------------------------------------
+# 2. Python Virtual Environments
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+bin/
+include/
+lib/
+lib64/
+share/pyvenv.cfg
+pyvenv.cfg
+
+# ------------------------------------------------------------------------------
+# 3. Python Bytecode, Compilations & Package Builds
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ------------------------------------------------------------------------------
+# 4. Unit Testing, Coverage & Quality Assurance
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+.tox/
+.nox/
+
+# ------------------------------------------------------------------------------
+# 5. User Uploads, Local Scratch & OCR Working Directories
+# ------------------------------------------------------------------------------
+# Keep uploaded contracts strictly confidential and out of source control
+uploads/
+temp/
+tmp/
+cache/
+scratch/
+output/
+debug/
+*.ocr.png
+*.ocr.jpg
+
+# ------------------------------------------------------------------------------
+# 6. Vector Databases, Embeddings & Pickled Models
+# ------------------------------------------------------------------------------
+# FAISS vector indexes are generated in volatile session RAM
+*.index
+*.faiss
+*.pkl
+*.pickle
+*.bin
+*.npy
+*.npz
+
+# ------------------------------------------------------------------------------
+# 7. Logging & Diagnostics
+# ------------------------------------------------------------------------------
+*.log
+logs/
+*.log.*
+
+# ------------------------------------------------------------------------------
+# 8. Editor & IDE Metadata
+# ------------------------------------------------------------------------------
+.vscode/
+!.vscode/settings.json.example
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ------------------------------------------------------------------------------
+# 9. Jupyter & IPython
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+
+# ------------------------------------------------------------------------------
+# 10. Operating System Artifacts
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
