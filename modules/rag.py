@@ -25,9 +25,12 @@ except ImportError:
     HAS_GENAI_SDK = False
 
 # Default and recommended models
-DEFAULT_MODEL = "gemini-2.5-flash"
+DEFAULT_MODEL = "gemini-3.6-flash"
 AVAILABLE_MODELS = [
+    "gemini-3.6-flash",
     "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash",
     "gemini-2.5-pro",
 ]
 
@@ -150,22 +153,46 @@ def test_gemini_connection(
         
         # Test prompt
         test_prompt = "Hello. Respond with: 'LegalDocAiAssist Gemini connection verified successfully.'"
-        response = client.models.generate_content(
-            model=active_model,
-            contents=test_prompt
-        )
+        
+        models_to_try = [active_model]
+        for candidate in ["gemini-3.6-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.5-flash"]:
+            if candidate not in models_to_try:
+                models_to_try.append(candidate)
+
+        last_error = None
+        for m_name in models_to_try:
+            try:
+                response = client.models.generate_content(
+                    model=m_name,
+                    contents=test_prompt
+                )
+                latency = round(time.time() - start_time, 2)
+                response_text = response.text.strip() if hasattr(response, "text") and response.text else "Connection OK"
+                
+                # If fallback succeeded and differed from requested model, sync Streamlit session
+                if HAS_STREAMLIT and hasattr(st, "session_state"):
+                    st.session_state.gemini_model = m_name
+
+                return (
+                    True,
+                    f"Successfully connected to Gemini ({m_name}) in {latency}s.",
+                    {
+                        "model": m_name,
+                        "latency_seconds": latency,
+                        "sample_response": response_text
+                    }
+                )
+            except Exception as candidate_err:
+                last_error = str(candidate_err)
+                # If error is not a model not found / deprecated error, don't loop endlessly
+                if "404" not in last_error and "not_found" not in last_error.lower() and "no longer available" not in last_error.lower():
+                    break
 
         latency = round(time.time() - start_time, 2)
-        response_text = response.text.strip() if hasattr(response, "text") and response.text else "Connection OK"
-
         return (
-            True,
-            f"Successfully connected to Gemini ({active_model}) in {latency}s.",
-            {
-                "model": active_model,
-                "latency_seconds": latency,
-                "sample_response": response_text
-            }
+            False,
+            f"Gemini connection failed: {last_error}",
+            {"model": active_model, "latency_seconds": latency, "error": last_error}
         )
     except Exception as e:
         latency = round(time.time() - start_time, 2)
@@ -441,21 +468,29 @@ def generate_grounded_explanation(
     if HAS_GENAI_SDK and resolved_key:
         try:
             client = get_gemini_client(api_key=resolved_key)
-            response = client.models.generate_content(
-                model=active_model,
-                contents=prompt
-            )
-            raw_text = response.text.strip() if hasattr(response, "text") and response.text else ""
-            if raw_text:
-                return {
-                    "text": raw_text,
-                    "model": active_model,
-                    "language": language,
-                    "is_live_api": True,
-                    "citations": rag_payload.get("citations", [])
-                }
+            models_to_try = [active_model]
+            for candidate in ["gemini-3.6-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.5-flash"]:
+                if candidate not in models_to_try:
+                    models_to_try.append(candidate)
+
+            for m_name in models_to_try:
+                try:
+                    response = client.models.generate_content(
+                        model=m_name,
+                        contents=prompt
+                    )
+                    raw_text = response.text.strip() if hasattr(response, "text") and response.text else ""
+                    if raw_text:
+                        return {
+                            "text": raw_text,
+                            "model": m_name,
+                            "language": language,
+                            "is_live_api": True,
+                            "citations": rag_payload.get("citations", [])
+                        }
+                except Exception:
+                    continue
         except Exception as gen_err:
-            # Fall through to fallback with warning
             pass
 
     # Fallback when offline or API call failed

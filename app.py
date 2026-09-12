@@ -292,17 +292,26 @@ def render_sidebar():
         resolved_key = resolve_api_key(st.session_state.gemini_api_key)
         
         if resolved_key:
-            st.success("API Key Active", icon="🔑")
+            st.success("API Key Active (Cloud Secrets)", icon="🔒")
+            with st.expander("⚙️ Override API Key (Optional)", expanded=False):
+                key_input = st.text_input(
+                    "Custom Gemini API Key",
+                    value=st.session_state.gemini_api_key,
+                    type="password",
+                    placeholder="AIzaSy...",
+                    help="Optional: Override cloud secret with a custom key."
+                )
+                if key_input != st.session_state.gemini_api_key:
+                    st.session_state.gemini_api_key = key_input
+                    st.session_state.api_test_result = None
         else:
             st.warning("API Key Not Detected", icon="⚠️")
-
-        with st.expander("🔑 Configure API Key", expanded=not bool(resolved_key)):
             key_input = st.text_input(
                 "Gemini API Key",
                 value=st.session_state.gemini_api_key,
                 type="password",
                 placeholder="AIzaSy...",
-                help="Set in .env as GEMINI_API_KEY, Streamlit secrets, or enter directly here."
+                help="Set in Streamlit secrets or enter directly here."
             )
             if key_input != st.session_state.gemini_api_key:
                 st.session_state.gemini_api_key = key_input
